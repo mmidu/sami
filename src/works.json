@@ -1,32 +1,29 @@
-[
-    {
-      "title": "DUREX",
-      "visible": true,
-      "images": [
-        "FrameDurex1.jpg",
-        "FrameDurex2.jpg",
-        "FrameDurex3.jpg"
-      ],
-      "vimeo": "https://vimeo.com/durex"
+{
+    "durex": {
+        "visible": true,
+        "images": [
+            "FrameDurex1.jpg",
+            "FrameDurex2.jpg",
+            "FrameDurex3.jpg"
+        ],
+        "vimeo": "https://vimeo.com/durex"
     },
-    {
-      "title": "DUREX 2",
-      "visible": true,
-      "images": [
-        "FrameDurex1.jpg",
-        "FrameDurex2.jpg",
-        "FrameDurex3.jpg"
-      ],
-      "vimeo": "https://vimeo.com/lavoro_2"
+    "durex 2": {
+        "visible": true,
+        "images": [
+            "FrameDurex1.jpg",
+            "FrameDurex2.jpg",
+            "FrameDurex3.jpg"
+        ],
+        "vimeo": "https://vimeo.com/lavoro_2"
     },
-    {
-      "title": "DUREX 3",
-      "visible": true,
-      "images": [
-        "FrameDurex1.jpg",
-        "FrameDurex2.jpg",
-        "FrameDurex3.jpg"
-      ],
-      "vimeo": "https://vimeo.com/work_test"
+    "durex 3": {
+        "visible": true,
+        "images": [
+            "FrameDurex1.jpg",
+            "FrameDurex2.jpg",
+            "FrameDurex3.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
     }
-  ]
+}

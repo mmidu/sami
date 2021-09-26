@@ -20,7 +20,7 @@ class Main extends Component {
                     <Route path={['/about', '/works', '/contacts']}>
                         <SiteLayout>
                             <Switch>
-                                <Route path='/works/:id' component={Work} />
+                                <Route path='/works/:name' component={Work} />
                                 <Route exact path='/works' component={Works} />
                                 <Route path='/about' component={About} />
                                 <Route path='/contacts' component={Contacts} />

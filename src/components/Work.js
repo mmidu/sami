@@ -43,7 +43,7 @@ class Work extends Component {
         return (
             <React.Fragment>
                 <div className={`workTit ${this.state.titleVisible ? 'play' : 'hidden'}`}>
-                    <Link to={'/works/' + this.props.id}>{this.props.title}</Link>
+                    <Link to={'/works/' + this.props.title.toLowerCase()}>{this.props.title.toUpperCase()}</Link>
                 </div>
                 <div ref={this.ref} className='blockWork'>
                     {

@@ -8,12 +8,12 @@ class Works extends Component {
     super()
     
     this.state = {
-      workRefs: data.map(() => {
+      workRefs: Object.keys(data).map(() => {
         return React.createRef()
       }),
       currentWork: 1,
-      workTitles: data.map(elem => {
-        return elem.title
+      workTitles: Object.keys(data).map(title => {
+        return title
       })
     }
   }
@@ -22,12 +22,11 @@ class Works extends Component {
     return (
       <React.Fragment>
         {
-          data.map((elem, index) => {
+          Object.keys(data).map((elem, index) => {
             return <Work 
-                      id={index}
                       ref={this.state.workRefs[index]} 
                       title={this.state.workTitles[index]}
-                      images={elem.images}
+                      images={data[elem].images}
                     />
           })
         }

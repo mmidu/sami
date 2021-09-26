@@ -5,7 +5,7 @@ import data from '../works.json'
 
 const Work = (props) => {
     const galleryRef = useRef()
-    const [work, setWork] = useState(data[props.match.params.id])
+    const [work] = useState(data[props.match.params.name])
 
     const scrollHorizontally = (e) => {
         e = window.event || e
@@ -36,7 +36,7 @@ const Work = (props) => {
                 </div>
                 <div className='work-container-header'>
                     <Link to='/works' className='nostyle work-back-button'>&lt;&nbsp;&nbsp;&nbsp;Back</Link>
-                    <div className='work-title'>{work.title.toUpperCase()}</div>
+                    <div className='work-title'>{props.match.params.name.toUpperCase()}</div>
                 </div>
 
                 <div className='work-container-footer'>
