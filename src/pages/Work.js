@@ -11,7 +11,7 @@ const Work = (props) => {
         e = window.event || e
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))
         galleryRef.current.scrollLeft -= (delta * 20)
-        e.preventDefault()
+        // e.preventDefault()
     }
 
     return (
@@ -30,7 +30,11 @@ const Work = (props) => {
                 <div ref={galleryRef} className='work-container-gallery' onWheel={scrollHorizontally}>
                     {
                         work.images.map((elem, index) => {
-                            return <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
+                            return <img 
+                                        key={'image-' + index} 
+                                        src={process.env.PUBLIC_URL + '/images/' + elem} 
+                                        alt={'image-' + index} 
+                                    />
                         })
                     }
                 </div>

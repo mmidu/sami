@@ -24,6 +24,7 @@ class Works extends Component {
         {
           Object.keys(data).map((elem, index) => {
             return <Work 
+                      key={'work-' + index}
                       ref={this.state.workRefs[index]} 
                       title={this.state.workTitles[index]}
                       images={data[elem].images}

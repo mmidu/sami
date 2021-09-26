@@ -49,7 +49,7 @@ class Work extends Component {
                     {
                         this.props.images.map((elem, index) => {
                             return (
-                                <div className={'imageRandom-' + index}>
+                                <div key={'image-' + index} className={'imageRandom-' + index}>
                                     <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
                                 </div>
                             )
