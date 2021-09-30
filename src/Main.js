@@ -20,15 +20,10 @@ class Main extends Component {
                 <Switch>
                     <Route path={['/about', '/works', '/contacts']}>
                             <Switch>
-                                <SiteLayout>
                                     <Route path='/works/:name' component={Work} />
                                     <Route exact path='/works' component={Works} />
-                                </SiteLayout>
-
-                                <TextLayout>
                                     <Route path='/about' component={About} />
                                     <Route path='/contacts' component={Contacts} />
-                                </TextLayout>
                             </Switch>
                     </Route>
 
