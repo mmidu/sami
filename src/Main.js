@@ -10,6 +10,7 @@ import Contacts from './pages/Contacts'
 import Works from './pages/Works'
 import Work from './pages/Work'
 import SiteLayout from './components/SiteLayout'
+import TextLayout from './components/TextLayout'
 import './Main.css'
 
 class Main extends Component {
@@ -18,14 +19,17 @@ class Main extends Component {
             <BrowserRouter basename={'/cs/sami/'}>
                 <Switch>
                     <Route path={['/about', '/works', '/contacts']}>
-                        <SiteLayout>
                             <Switch>
-                                <Route path='/works/:name' component={Work} />
-                                <Route exact path='/works' component={Works} />
-                                <Route path='/about' component={About} />
-                                <Route path='/contacts' component={Contacts} />
+                                <SiteLayout>
+                                    <Route path='/works/:name' component={Work} />
+                                    <Route exact path='/works' component={Works} />
+                                </SiteLayout>
+
+                                <TextLayout>
+                                    <Route path='/about' component={About} />
+                                    <Route path='/contacts' component={Contacts} />
+                                </TextLayout>
                             </Switch>
-                        </SiteLayout>
                     </Route>
 
                     <Route path={['/']}>
