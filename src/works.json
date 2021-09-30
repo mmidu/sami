@@ -26,4 +26,14 @@
         ],
         "vimeo": "https://vimeo.com/work_test"
     }
+        ,
+        "pompea": {
+        "visible": true,
+        "images": [
+            "FrameDurex1.jpg",
+            "FrameDurex2.jpg",
+            "FrameDurex3.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
+    }
 }
