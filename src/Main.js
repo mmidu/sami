@@ -9,8 +9,6 @@ import About from './pages/About'
 import Contacts from './pages/Contacts'
 import Works from './pages/Works'
 import Work from './pages/Work'
-import SiteLayout from './components/SiteLayout'
-import TextLayout from './components/TextLayout'
 import './Main.css'
 
 class Main extends Component {
