@@ -104,7 +104,7 @@ a.nostyle:visited {
 .work-container-header {
     position: fixed;
     display: flex; 
-    width: 80%;
+    width: 81%;
     height: 6em;
     right: 0;
 }
@@ -124,10 +124,14 @@ a.nostyle:visited {
     flex-grow: 1;
     text-align: left;
     font-size: 8rem;
+    font-weight: bold;
     -webkit-text-stroke: 1px #fff;
     -webkit-text-fill-color: transparent;
 }
-
+.nostyle.work-back-button {
+    font-weight: bold;
+    font-size: 1em;
+}
 .work-back-button {
     position: relative;
     flex-grow: 10;
@@ -412,6 +416,38 @@ a.nostyle:visited {
     -webkit-text-stroke-color: #707070;
     margin: auto;
 }
+.contTxt {
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    left: 15%;
+}
+.txtAbout {
+    width: 75%;
+}
+.txtAbout h2{
+    
+}
+.txtAbout p{
+    
+}
+.txtContacts{
+}
+.txtContacts h2{
+    
+}
+.txtContacts span{
+    
+}
+.txtContacts p{
+    
+}
+txtContacts ul{
+    list-style: none;
+}
+txtContacts li{
+   display: block; 
+}
 .sideDx {
     width: 82%;
     height: auto;
@@ -419,6 +455,13 @@ a.nostyle:visited {
     left: 15%;
     top: 50%;
     transform: translateY(-50%);
+}
+.sideDx h2 {
+    font-size: 5em;
+}
+.sideDx p {
+    font-size: 2em;
+    font-weight: 300;
 }
 .sideDx h2 {
     font-size: 5em;
@@ -442,13 +485,21 @@ a.nostyle:visited {
     /* border: 2px solid black; */
     /* background-color: yellow; */
 }
-
+.blockWork div img {
+    width: 100%;
+}
+.imageRandom-0,
 .imageRandom-1,
 imageRandom-2,
 imageRandom-3 {
     position: relative;
 }
 
+.imageRandom-0{
+    grid-column: 1/span 11;
+    padding-bottom: 12%;
+    margin-top: 8vh;
+}
 .imageRandom-1 {
     grid-column: 1/span 11;
     padding-bottom: 12%;

@@ -1,28 +1,95 @@
 {
-    "durex": {
+    "nope": {
         "visible": true,
         "images": [
-            "FrameDurex1.jpg",
-            "FrameDurex2.jpg",
-            "FrameDurex3.jpg"
+            "nope/AA029.jpg",
+            "nope/img20210526_0122.jpg",
+            "nope/AA023.jpg"
         ],
         "vimeo": "https://vimeo.com/durex"
     },
-    "durex 2": {
+    "nike": {
         "visible": true,
         "images": [
-            "FrameDurex1.jpg",
-            "FrameDurex2.jpg",
-            "FrameDurex3.jpg"
+            "nike/vlcsnap-2021-09-24-16h26m18s056.jpg",
+            "nike/vlcsnap-2021-09-24-16h26m38s783.jpg",
+            "nike/vlcsnap-2021-09-24-16h27m37s117.jpg"
         ],
         "vimeo": "https://vimeo.com/lavoro_2"
     },
-    "durex 3": {
+    "ventiseidieci": {
         "visible": true,
         "images": [
-            "FrameDurex1.jpg",
-            "FrameDurex2.jpg",
-            "FrameDurex3.jpg"
+            "2610/DSCF1425.jpg",
+            "2610/DSCF1432.jpg",
+            "2610/DSCF1440.jpg",
+            "2610/DSCF1498.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
+    }
+        ,
+        "zma": {
+        "visible": true,
+        "images": [
+            "zma/zmaOne.jpg",
+            "zma/zmaTwo.jpg",
+            "zma/zmaThree.jpg",
+            "zma/zmaFour.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
+    }
+,
+        "pompea": {
+        "visible": true,
+        "images": [
+            "pompea/Schermata-2021-09-24-alle-16.45.50.jpg",
+            "pompea/Schermata-2021-09-24-alle-16.47.45.jpg",
+            "pompea/Schermata-2021-09-24-alle-16.48.40.jpg",
+            "pompea/Schermata-2021-09-24-alle-16.48.54.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
+    }
+,
+        "durex": {
+        "visible": true,
+        "images": [
+            "durex/12A_00955.jpg",
+            "durex/13A_00956.jpg",
+            "durex/14A_00957.jpg",
+            "durex/17A_00960.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
+    }
+,
+        "yes milano": {
+        "visible": true,
+        "images": [
+            "yesmilano/DSCF4589.jpg",
+            "yesmilano/DSCF4371.jpg",
+            "yesmilano/DSCF4384.jpg",
+            "yesmilano/DSCF4524.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
+    }
+,
+        "enel x": {
+        "visible": true,
+        "images": [
+            "enel/DSCF4935.jpg",
+            "enel/DSCF4993.jpg",
+            "enel/DSCF5015.jpg",
+            "enel/DSCF5028.jpg"
+        ],
+        "vimeo": "https://vimeo.com/work_test"
+    }
+,
+        "personal": {
+        "visible": true,
+        "images": [
+            "personal/Ryiadhkid2.jpg",
+            "personal/18A_00479.jpg",
+            "personal/27A_00970.jpg",
+            "personal/17A_00478.jpg"
         ],
         "vimeo": "https://vimeo.com/work_test"
     }

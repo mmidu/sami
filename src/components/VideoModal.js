@@ -9,7 +9,8 @@ const VideoModal = (props) => {
             <div className='exit' onClick={props.toggleVideoModal}>QUIT</div>
             <ReactPlayer
                 url={props.url}
-                controls={true}
+                controls
+                className='video-modal-class'
             />
         </div>
     )
