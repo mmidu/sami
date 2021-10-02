@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Helmet } from 'react-helmet'
+import SiteLayout from '../components/SiteLayout'
 import Work from '../components/Work'
 import data from '../works.json'
 
@@ -21,16 +21,7 @@ class Works extends Component {
 
   render() {
     return (
-      <React.Fragment>
-      {<Helmet>
-                <style>
-                    {`
-                        .sideDx {
-                            text-align: unset !important;
-                        }
-                    `}
-                </style>
-            </Helmet>}
+      <SiteLayout>
         {
           Object.keys(data).map((elem, index) => {
             return <Work 
@@ -41,7 +32,7 @@ class Works extends Component {
                     />
           })
         }
-      </React.Fragment>
+      </SiteLayout>
     )
   }
 }

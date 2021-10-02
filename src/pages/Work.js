@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
+import SiteLayout from '../components/SiteLayout'
 import data from '../works.json'
 
 const Work = (props) => {
@@ -15,7 +16,7 @@ const Work = (props) => {
     }
 
     return (
-        <React.Fragment>
+        <SiteLayout>
             {<Helmet>
                 <style>
                     {`
@@ -48,7 +49,7 @@ const Work = (props) => {
                 </div>
             </div>
 
-        </React.Fragment>
+        </SiteLayout>
 
 
     )
