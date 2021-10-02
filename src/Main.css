@@ -534,7 +534,7 @@ imageRandom-3 {
 
 @keyframes spinVertical {
     0% {
-        transform: rotate(15deg);
+        transform: rotate(-15deg);
         transform-origin: center left;
         opacity: 0;
     }
