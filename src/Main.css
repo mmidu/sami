@@ -517,6 +517,7 @@ imageRandom-3 {
     height: 12em;
     z-index: 1;
     overflow: hidden;
+    opacity: 1;
 }
 
 .workTit a {
@@ -524,14 +525,11 @@ imageRandom-3 {
 }
 
 .workTit.play a{
-    
     -moz-animation: spinVertical .5s ease-out forwards;
     -o-animation: spinVertical .5s ease-out forwards;
     -webkit-animation: spinVertical .5s ease-out forwards;
     animation: spinVertical .5s ease-out forwards;
-    
 }
-
 @keyframes spinVertical {
     0% {
         transform: rotate(-15deg);
@@ -542,6 +540,27 @@ imageRandom-3 {
         transform: rotate(0);
         transform-origin: center left;
         opacity: 1;
+    }
+}
+
+
+.workTit.stop a{
+    -moz-animation: fadeOutVertical .5s ease-out forwards;
+    -o-animation: fadeOutVertical .5s ease-out forwards;
+    -webkit-animation: fadeOutVertical .5s ease-out forwards;
+    animation: fadeOutVertical .5s ease-out forwards;   
+}
+
+@keyframes fadeOutVertical {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: center left;
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(25deg);
+        transform-origin: center left;
+        opacity: 0;
     }
 }
 
