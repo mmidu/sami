@@ -508,11 +508,17 @@ imageRandom-3 {
     padding-bottom: 20%;
 }
 
+.workTit:before {
+    clip-shape: inset(0px 0px 0px 0px);
+}
+
 .workTit {
     position: fixed;
     top: calc(50% - 8em);
-    transform: rotateX(-180deg);
+    //transform: rotateY(-180deg);
+    //transform:  translateX(-10%) translateY(-10%) rotate(-20deg);
     z-index: 1;
+    opacity: 0;
 }
 
 .workTit.play {
@@ -524,10 +530,14 @@ imageRandom-3 {
 
 @keyframes spinVertical {
     0% {
-        transform: rotateX(-180deg);
+        //transform: rotateX(-180deg);
+        transform:  translateX(-10%) translateY(-10%) rotate(-20deg);
+        opacity: 0;
     }
     100% {
-        transform: rotateX(0deg);
+        //transform: rotateX(0deg);
+        transform:  translateX(0) translateY(0) rotate(0);
+        opacity: 1;
     }
 }
 
