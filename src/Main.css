@@ -509,15 +509,14 @@ imageRandom-3 {
 }
 
 .workTit {
+    color: white;
+    mix-blend-mode: difference;
     position: fixed;
     top: calc(50% - 8em);
-    //transform: rotateY(-180deg);
-    //transform:  translateX(-10%) translateY(-10%) rotate(-20deg);
     width: 80vw;
     height: 12em;
     z-index: 1;
-    opacity: 1;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .workTit a {
