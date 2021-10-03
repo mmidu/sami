@@ -40,6 +40,7 @@ Version: 1.0
 
 body {
     /* background-color: #f7f7f7; */
+    background-color: pink !important;
     font-family: 'Roboto', 'Samsung Sharp Sans Bold', 'Barlow', sans-serif;
     background-repeat: no-repeat;
     background-position: center top;
@@ -520,16 +521,24 @@ imageRandom-3 {
     opacity: 1;
 }
 
+.workTit.hide {
+    opacity: 0;
+    transition: .5s;
+}
+
 .workTit a {
+    opacity: 0;
     position: absolute;
 }
 
 .workTit.play a{
-    -moz-animation: spinVertical .5s ease-out forwards;
-    -o-animation: spinVertical .5s ease-out forwards;
-    -webkit-animation: spinVertical .5s ease-out forwards;
-    animation: spinVertical .5s ease-out forwards;
+    /* opacity: 1 !important;  */
+    -moz-animation: spinVertical .5s ease-out .5s forwards;
+    -o-animation: spinVertical .5s ease-out .5s forwards;
+    -webkit-animation: spinVertical .5s ease-out .5s forwards;
+    animation: spinVertical .5s ease-out .5s forwards;
 }
+
 @keyframes spinVertical {
     0% {
         transform: rotate(-15deg);
@@ -542,7 +551,6 @@ imageRandom-3 {
         opacity: 1;
     }
 }
-
 
 .workTit.stop a{
     -moz-animation: fadeOutVertical .5s ease-out forwards;
