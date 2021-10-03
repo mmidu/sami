@@ -859,58 +859,113 @@ img {
 
 @media only screen and (max-width: 64.063em) {
     /* The only rule that matters */
+    .logo h1, .logoOutline h1 {
+        font-size: 3.5em;
+    }
+    .sideSx {
+        margin: 1em 0em;
+        position: unset;
+    }
+    .logo {
+        position: unset;
+        margin: auto;
+        text-align: center;
+    }
+    .lateral {
+        position: unset;
+        transform: unset;
+        text-align: center;
+        margin: 1em 0 0 0;
+    }
+
+    .lateral li {
+        transform: unset;
+        margin: auto 2em 0 2em;
+        display: inline;
+    }
+    .lateral li a {
+        font-size: 1em;
+        color: #000;
+        font-weight: 300;
+        text-decoration: none;
+    }
+    .sideDx {
+        width: 100%;
+        height: auto;
+        position: unset;
+        left: 0%;
+    }
+    .workTit a {
+        position: unset;
+    }
+    .workTit {
+        top: 30%;
+        width: 90vw;
+        text-align: center;
+    }
+    .workTit a{
+        font-size: 8em;
+    }
+    .blockWork{
+        display: unset;
+    }
+    .imageRandom-0, .imageRandom-1, imageRandom-2, imageRandom-3
+    {
+        margin: 0;
+        padding: 0;
+    }
+    .imageRandom-3{
+        margin-bottom: 8em;
+    }
+    .sideDx {
+        width: 90%;
+        height: auto;
+        position: unset;
+        left: unset;
+        margin: 7em auto;
+    }
+    .work-container-gallery{
+        top: 11em;
+    }
+    .work-back-button {
+        position: relative;
+        flex-grow: unset;
+        margin-top: 0em;
+    }
+    .work-container-header{
+        position: fixed;
+        display: contents;
+        margin: 90%;
+        height: auto;
+    }
+    .work-title{
+        text-align: center;
+        font-size: 4em;
+    }
 }
 
 
 /*SMALL*/
 
 @media only screen and (max-width: 40.063em) {
-    .center {
-        padding: 0 1em;
+    .workTit {
+        top: 30%;
+        width: 90%;
+        text-align: center;
     }
-    .center h1 {
-        font-size: 1.8em;
-    }
-    .frameFilm {
-        width: 100%;
-        height: 500px;
-        background-size: cover;
-    }
-    #frames-scroll {
-        width: 150vw;
-        height: calc(150vw / 1.77);
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        max-width: 150vw;
-        max-height: 100vh;
-    }
-    .slider .slide-track {
-        /* background-color: yellow; */
-        -webkit-animation: enterscreen 3s linear, scroll 10s linear infinite;
-        -webkit-animation-delay: 0s, 3s;
-        animation: enterscreen 3s linear, scroll 10s linear infinite;
-        animation-delay: 0s, 3s;
-    }
-    @-webkit-keyframes enterscreen {
-        0% {
-            -webkit-transform: translateX(calc(15em * 2));
-            transform: translateX(calc(15em * 2));
+    .sideDx {
+        width: 90%;
         }
-        100% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
+    .workTit a {
+        font-size: 3.6em;
     }
-    @keyframes enterscreen {
-        0% {
-            -webkit-transform: translateX(calc(15em * 2));
-            transform: translateX(calc(15em * 2));
-        }
-        100% {
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
+    .sideDx {
+        margin: 5em auto;
+    }
+    .work-container-gallery{
+        width: 90%;
+    }
+    .work-container-gallery img{
+        margin: 0;
     }
 }
