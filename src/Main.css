@@ -949,6 +949,43 @@ img {
         text-align: center;
         font-size: 4em;
     }
+
+    .slider .slide-track {
+        display: flex;
+        width: calc(30em * 4);
+    }
+    
+    .slider .slide-track .slide {
+        width: 30em;
+    }
+
+    @-webkit-keyframes enterscreen {
+        0% {
+            -webkit-transform: translateX(calc(30em * 2));
+            transform: translateX(calc(30em * 2));
+        }
+    }
+    
+    @keyframes enterscreen {
+        0% {
+            -webkit-transform: translateX(calc(30em * 2));
+            transform: translateX(calc(30em * 2));
+        }
+    }
+    
+    @-webkit-keyframes scroll {
+        100% {
+            -webkit-transform: translateX(calc(-30em * 2));
+            transform: translateX(calc(-30em * 2));
+        }
+    }
+    
+    @keyframes scroll {
+        100% {
+            -webkit-transform: translateX(calc(-30em * 2));
+            transform: translateX(calc(-30em * 2));
+        }
+    }
 }
 
 
@@ -974,5 +1011,66 @@ img {
     }
     .work-container-gallery img{
         margin: 0;
+    }
+
+    .cta {
+        font-size: 3em;
+    }
+
+    /* .slide.cta {
+        text-align: center;
+    } */
+
+    .slider .slide-track {
+        display: flex;
+        width: calc(22em * 4);
+    }
+    
+    .slider .slide-track .slide {
+        width: 22em;
+    }
+
+    @-webkit-keyframes enterscreen {
+        0% {
+            -webkit-transform: translateX(calc(20em * 2));
+            transform: translateX(calc(20em * 2));
+        }
+        100% {
+            -webkit-transform: translateX(calc(2em * 2));
+            transform: translateX(calc(2em * 2));
+        }
+    }
+    
+    @keyframes enterscreen {
+        0% {
+            -webkit-transform: translateX(calc(20em * 2));
+            transform: translateX(calc(20em * 2));
+        }
+        100% {
+            -webkit-transform: translateX(calc(2em * 2));
+            transform: translateX(calc(2em * 2));
+        }
+    }
+    
+    @-webkit-keyframes scroll {
+        0% {
+            -webkit-transform: translateX(calc(2em * 2));
+            transform: translateX(calc(2em * 2));
+        }
+        100% {
+            -webkit-transform: translateX(calc(-20em * 2));
+            transform: translateX(calc(-20em * 2));
+        }
+    }
+    
+    @keyframes scroll {
+        0% {
+            -webkit-transform: translateX(calc(2em * 2));
+            transform: translateX(calc(2em * 2));
+        }
+        100% {
+            -webkit-transform: translateX(calc(-20em * 2));
+            transform: translateX(calc(-20em * 2));
+        }
     }
 }
