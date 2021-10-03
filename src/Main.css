@@ -521,6 +521,7 @@ imageRandom-3 {
 }
 
 .workTit.hide {
+    pointer-events: none;
     opacity: 0;
     transition: .5s;
 }
@@ -1016,10 +1017,6 @@ img {
     .cta {
         font-size: 3em;
     }
-
-    /* .slide.cta {
-        text-align: center;
-    } */
 
     .slider .slide-track {
         display: flex;
