@@ -201,7 +201,7 @@ a.nostyle:visited {
 .videoModal {
     width: 100vw;
     height: 100vh;
-    background-color: white;
+    background-color: #000000e3;
     z-index: 3;
     position: absolute;
 }
@@ -213,19 +213,27 @@ a.nostyle:visited {
 .visible {
     display: unset;
 }
-
+.video-modal-class {
+    margin: auto;
+    width: 100% !important;
+    height: 80vh !important;
+}
 .exit {
-    padding: 1em 0.5em;
-    background: grey;
-    border-radius: 12px;
-    display: inline-block;
-    width: 6em;
-    height: auto;
-    margin: 1em;
-    text-align: center;
+    text-align: left;
+    color: #fff;
+    margin: 1em auto;
+    left: 15%;
+    position: relative;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.5s ease-out 0s;
+}
+.exit svg{
+    margin: 0 0.5em;
 }
 
 .exit:hover {
+    opacity: 0.6;
     cursor: pointer;
 }
 
@@ -606,10 +614,11 @@ imageRandom-3 {
 }
 
 .slider .slide-track {
-    /* background-color: yellow; */
+    /*background-color: yellow;*/
     -webkit-animation: enterscreen 10s linear, scroll 10s linear infinite;
     -webkit-animation-delay: 0s, 10s;
-    animation: enterscreen 10s linear, scroll 10s linear infinite;
+    animation: enterscreen 3s linear, scroll 7s linear infinite;
+        animation-delay: 0s, 0s;
     animation-delay: 0s, 10s;
     display: flex;
     width: calc(50em * 4);
