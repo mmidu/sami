@@ -11,12 +11,14 @@ Version: 1.0
 /*-------------------------------------------------------------
     IMPORT OF GLOBAL CSS  / RESET AND FOUNDATION CSS DEFAULT
 -------------------------------------------------------------*/
+
 @font-face {
     font-family: 'Samsung Sharp Sans Bold';
     font-style: normal;
     font-weight: normal;
     src: local('Samsung Sharp Sans Bold'), url('css/samsungsharpsans-bold.woff') format('woff');
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;200;300&display=swap');
 @import url("css/foundation.css");
@@ -64,6 +66,7 @@ body:before {
     -o-background-size: cover;
     background-size: cover;
 }
+
 html,
 body {
     background-repeat: no-repeat;
@@ -81,6 +84,7 @@ h5,
 h6 {
     font-family: 'roboto', sans-serif;
 }
+
 a.nostyle:link {
     text-decoration: inherit;
     color: inherit;
@@ -92,6 +96,7 @@ a.nostyle:visited {
     color: inherit;
     cursor: auto;
 }
+
 .row {
     width: 100%;
     margin-left: auto;
@@ -103,7 +108,7 @@ a.nostyle:visited {
 
 .work-container-header {
     position: fixed;
-    display: flex; 
+    display: flex;
     width: 81%;
     height: 6em;
     right: 0;
@@ -128,10 +133,12 @@ a.nostyle:visited {
     -webkit-text-stroke: 1px #fff;
     -webkit-text-fill-color: transparent;
 }
+
 .nostyle.work-back-button {
     font-weight: bold;
     font-size: 1em;
 }
+
 .work-back-button {
     position: relative;
     flex-grow: 10;
@@ -142,7 +149,7 @@ a.nostyle:visited {
 
 .work-container-gallery {
     height: calc(100% - 12em);
-    white-space:nowrap;
+    white-space: nowrap;
     overflow-x: scroll;
     top: 6em;
     width: 80%;
@@ -153,9 +160,11 @@ a.nostyle:visited {
     display: inline;
     margin: 0px 3em;
     padding: 0px;
-    vertical-align:middle;
+    vertical-align: middle;
     height: 100%;
 }
+
+
 /*-------------------------------------------------------------
 			HEADER WORK IN PROGRESS
 -------------------------------------------------------------*/
@@ -213,11 +222,13 @@ a.nostyle:visited {
 .visible {
     display: unset;
 }
+
 .video-modal-class {
     margin: auto;
     width: 100% !important;
     height: 80vh !important;
 }
+
 .exit {
     text-align: left;
     color: #fff;
@@ -228,7 +239,8 @@ a.nostyle:visited {
     font-size: 1em;
     transition: all 0.5s ease-out 0s;
 }
-.exit svg{
+
+.exit svg {
     margin: 0 0.5em;
 }
 
@@ -321,8 +333,19 @@ a.nostyle:visited {
 
 .lateral li {
     list-style: none;
+    /* margin: 10em -1.4em; */
     margin: 10em -1.4em;
-    transform: rotate(-90deg);
+    transform: rotate(-90deg) translateY(-5em);
+}
+
+.lateral li.about.shown {
+    transform: rotate(-90deg) translateY(0);
+    transition: 0.357s transform 0.5s ease-in;
+}
+
+.lateral li.contacts.shown {
+    transform: rotate(-90deg) translateY(0);
+    transition: 0.765s transform 0.5s ease-in;
 }
 
 .lateral li a {
@@ -424,51 +447,54 @@ a.nostyle:visited {
     -webkit-text-stroke-color: #fff;
     margin: auto;
 }
+
 .contTxt {
     top: 50%;
     transform: translateY(-50%);
     position: absolute;
     left: 15%;
 }
+
 .txtAbout {
     width: 75%;
 }
-.txtAbout h2{
-    
-}
-.txtAbout p{
-    
-}
-.txtContacts{
-}
-.txtContacts h2{
-    
-}
-.txtContacts span{
-    
-}
-.txtContacts p{
-    
-}
-txtContacts ul{
+
+.txtAbout h2 {}
+
+.txtAbout p {}
+
+.txtContacts {}
+
+.txtContacts h2 {}
+
+.txtContacts span {}
+
+.txtContacts p {}
+
+txtContacts ul {
     list-style: none;
 }
-txtContacts li{
-   display: block; 
+
+txtContacts li {
+    display: block;
 }
+
 .sideDx {
     width: 82%;
     height: auto;
     position: absolute;
     left: 15%;
 }
+
 .sideDx h2 {
     font-size: 5em;
 }
+
 .sideDx p {
     font-size: 2em;
     font-weight: 300;
 }
+
 .blockWork {
     display: grid;
     grid-template-columns: repeat(20, minmax(0, 1fr));
@@ -484,9 +510,11 @@ txtContacts li{
     /* border: 2px solid black; */
     /* background-color: yellow; */
 }
+
 .blockWork div img {
     width: 100%;
 }
+
 .imageRandom-0,
 .imageRandom-1,
 imageRandom-2,
@@ -494,11 +522,12 @@ imageRandom-3 {
     position: relative;
 }
 
-.imageRandom-0{
+.imageRandom-0 {
     grid-column: 1/span 11;
     padding-bottom: 12%;
     margin-top: 8vh;
 }
+
 .imageRandom-1 {
     grid-column: 1/span 11;
     padding-bottom: 12%;
@@ -539,7 +568,7 @@ imageRandom-3 {
     position: absolute;
 }
 
-.workTit.play a{
+.workTit.play a {
     /* opacity: 1 !important;  */
     -moz-animation: spinVertical .5s ease-out .5s forwards;
     -o-animation: spinVertical .5s ease-out .5s forwards;
@@ -560,11 +589,11 @@ imageRandom-3 {
     }
 }
 
-.workTit.stop a{
+.workTit.stop a {
     -moz-animation: fadeOutVertical .5s ease-out forwards;
     -o-animation: fadeOutVertical .5s ease-out forwards;
     -webkit-animation: fadeOutVertical .5s ease-out forwards;
-    animation: fadeOutVertical .5s ease-out forwards;   
+    animation: fadeOutVertical .5s ease-out forwards;
 }
 
 @keyframes fadeOutVertical {
@@ -617,8 +646,7 @@ imageRandom-3 {
     /*background-color: yellow;*/
     -webkit-animation: enterscreen 10s linear, scroll 10s linear infinite;
     -webkit-animation-delay: 0s, 10s;
-    animation: enterscreen 3s linear, scroll 7s linear infinite;
-        animation-delay: 0s, 0s;
+    animation: enterscreen 10s linear, scroll 10s linear infinite;
     animation-delay: 0s, 10s;
     display: flex;
     width: calc(50em * 4);
@@ -709,16 +737,16 @@ img {
     }
 }
 
-#root::before{
+#root::before {
     width: 100vw;
     height: 100vh;
-    position:fixed;
+    position: fixed;
     background: transparent linear-gradient(129deg, rgba(244, 252, 255, 0.49) 0%, rgba(224, 247, 255, 0.49) 100%) 0% 0% no-repeat padding-box;
     content: '';
     opacity: 0;
 }
 
-#root.canvasZoom::before{
+#root.canvasZoom::before {
     opacity: 1;
     transition: 1.2s ease-in;
     -moz-transition: 1.2s ease-in;
@@ -812,14 +840,14 @@ img {
     margin-bottom: 0;
 }
 
-.scrollCTA.idle{
+.scrollCTA.idle {
     animation: slideInLandingCTA 0.75s ease-out forwards;
     animation-delay: 0.5s;
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
 }
 
-.scrollCTA.scrolled{
+.scrollCTA.scrolled {
     animation: slideOutLandingCTA 0.75s ease-out forwards;
     animation-delay: 0.5s;
 }
@@ -845,6 +873,8 @@ img {
         transform: translateX(0);
     }
 }
+
+
 
 /* .scrollLineUpper,
 .scrollLineLower {
@@ -876,7 +906,8 @@ img {
 
 @media only screen and (max-width: 64.063em) {
     /* The only rule that matters */
-    .logo h1, .logoOutline h1 {
+    .logo h1,
+    .logoOutline h1 {
         font-size: 3.5em;
     }
     .sideSx {
@@ -894,7 +925,6 @@ img {
         text-align: center;
         margin: 1em 0 0 0;
     }
-
     .lateral li {
         transform: unset;
         margin: auto 2em 0 2em;
@@ -920,18 +950,20 @@ img {
         width: 90vw;
         text-align: center;
     }
-    .workTit a{
+    .workTit a {
         font-size: 8em;
     }
-    .blockWork{
+    .blockWork {
         display: unset;
     }
-    .imageRandom-0, .imageRandom-1, imageRandom-2, imageRandom-3
-    {
+    .imageRandom-0,
+    .imageRandom-1,
+    imageRandom-2,
+    imageRandom-3 {
         margin: 0;
         padding: 0;
     }
-    .imageRandom-3{
+    .imageRandom-3 {
         margin-bottom: 8em;
     }
     .sideDx {
@@ -941,7 +973,7 @@ img {
         left: unset;
         margin: 7em auto;
     }
-    .work-container-gallery{
+    .work-container-gallery {
         top: 11em;
     }
     .work-back-button {
@@ -949,47 +981,41 @@ img {
         flex-grow: unset;
         margin-top: 0em;
     }
-    .work-container-header{
+    .work-container-header {
         position: fixed;
         display: contents;
         margin: 90%;
         height: auto;
     }
-    .work-title{
+    .work-title {
         text-align: center;
         font-size: 4em;
     }
-
     .slider .slide-track {
         display: flex;
         width: calc(30em * 4);
     }
-    
     .slider .slide-track .slide {
         width: 30em;
     }
-
     @-webkit-keyframes enterscreen {
         0% {
             -webkit-transform: translateX(calc(30em * 2));
             transform: translateX(calc(30em * 2));
         }
     }
-    
     @keyframes enterscreen {
         0% {
             -webkit-transform: translateX(calc(30em * 2));
             transform: translateX(calc(30em * 2));
         }
     }
-    
     @-webkit-keyframes scroll {
         100% {
             -webkit-transform: translateX(calc(-30em * 2));
             transform: translateX(calc(-30em * 2));
         }
     }
-    
     @keyframes scroll {
         100% {
             -webkit-transform: translateX(calc(-30em * 2));
@@ -1009,33 +1035,29 @@ img {
     }
     .sideDx {
         width: 90%;
-        }
+    }
     .workTit a {
         font-size: 3.6em;
     }
     .sideDx {
         margin: 5em auto;
     }
-    .work-container-gallery{
+    .work-container-gallery {
         width: 90%;
     }
-    .work-container-gallery img{
+    .work-container-gallery img {
         margin: 0;
     }
-
     .cta {
         font-size: 3em;
     }
-
     .slider .slide-track {
         display: flex;
         width: calc(22em * 4);
     }
-    
     .slider .slide-track .slide {
         width: 22em;
     }
-
     @-webkit-keyframes enterscreen {
         0% {
             -webkit-transform: translateX(calc(20em * 2));
@@ -1046,7 +1068,6 @@ img {
             transform: translateX(calc(2em * 2));
         }
     }
-    
     @keyframes enterscreen {
         0% {
             -webkit-transform: translateX(calc(20em * 2));
@@ -1057,7 +1078,6 @@ img {
             transform: translateX(calc(2em * 2));
         }
     }
-    
     @-webkit-keyframes scroll {
         0% {
             -webkit-transform: translateX(calc(2em * 2));
@@ -1068,7 +1088,6 @@ img {
             transform: translateX(calc(-20em * 2));
         }
     }
-    
     @keyframes scroll {
         0% {
             -webkit-transform: translateX(calc(2em * 2));
