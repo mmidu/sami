@@ -9,7 +9,7 @@ class Contacts extends Component {
                     GOT QUESTIONS?
                     <span>Let's talk</span>
                     <ul>
-                        <li>Email: <a href="mailto:samischinaia@gmail.com">samischinaia@gmail.com</a></li>
+                        <li>Email:<a href="mailto:samischinaia@gmail.com">samischinaia@gmail.com</a></li>
                         <li>IG: <a  target="_blank" href="https://www.instagram.com/alwaysthesam/" rel="noreferrer">Alwaysthesam</a></li>
                 
                     </ul>
