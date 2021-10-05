@@ -28,6 +28,15 @@ Version: 1.0
 			DEFAULT EDIT CLASS
 -------------------------------------------------------------*/
 
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
 .clear {
     clear: both;
 }
@@ -146,13 +155,14 @@ a.nostyle:visited {
     font-family: 'roboto', 'Samsung Sharp Sans Bold', sans-serif;
     cursor: pointer !important;
 }
-.work-back-button svg{
-    
-}
+
+.work-back-button svg {}
+
 .work-back-button span {
     margin: 0 0.5em;
     font-size: 1em;
 }
+
 .work-container-gallery {
     height: calc(100% - 12em);
     white-space: nowrap;
@@ -349,7 +359,6 @@ a.nostyle:visited {
     transition: 375ms transform 0.750s ease-out;
 }
 
-
 .lateral li.about.shown {
     transform: rotate(-90deg) translateY(0);
     transition: 750ms transform 0.750s ease-out;
@@ -479,13 +488,16 @@ a.nostyle:visited {
     font-size: 3.4em;
     color: #c4c4c4;
 }
+
 .txtAbout b {
     color: #627477;
 }
+
 .txtContacts {
     font-size: 3.4em;
     color: #c4c4c4;
 }
+
 .txtContacts ul {
     list-style: none;
     margin: 0;
@@ -495,17 +507,21 @@ a.nostyle:visited {
     margin: 0;
     display: block;
 }
+
 .txtContacts span {
     display: block;
     font-weight: 600;
 }
-.txtContacts a{
-    color:#627477;
+
+.txtContacts a {
+    color: #627477;
     transition: all 0.5s ease-out 0s;
 }
-.txtContacts a:hover{
-    color:#000;
+
+.txtContacts a:hover {
+    color: #000;
 }
+
 .sideDx {
     width: 82%;
     height: auto;
@@ -901,64 +917,98 @@ img {
     }
 }
 
-.workImage{
+.workImage {
     position: relative;
     opacity: 0;
     transition: opacity 0.1s ease-out;
     animation: showUPOne 1s ease-out forwards;
     -webkit-animation: showUPTwo 1s;
 }
+
 .workImage.inViewport {
     opacity: 1;
     transition: opacity 0.675s ease-in;
 }
 
 @keyframes showUPOne {
-    from {top: 1em; opacity: 0;}
-    to {top: 0px; opacity: 1}
+    from {
+        top: 1em;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1
+    }
 }
-.imageRandom-0{
+
+.imageRandom-0 {
     animation: showRandom-0 2s ease-out forwards;
     -webkit-animation: showRandom-0 2s;
 }
+
 @keyframes showRandom-0 {
-    from {top: 3em; opacity: 0;}
-    to {top: 0px; opacity: 1}
+    from {
+        top: 3em;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1
+    }
 }
-.imageRandom-1{
+
+.imageRandom-1 {
     animation: showRandom-1 2s ease-out forwards;
     -webkit-animation: showRandom-0 2s;
 }
+
 @keyframes showRandom-1 {
-    from {top: 4em; opacity: 0;}
-    to {top: 0px; opacity: 1}
+    from {
+        top: 4em;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1
+    }
 }
-.imageRandom-2{
+
+.imageRandom-2 {
     animation: showRandom-2 2s ease-out forwards;
     -webkit-animation: showRandom-2 2s;
 }
+
 @keyframes showRandom-2 {
-    from {top: 3em; opacity: 0;}
-    to {top: 0px; opacity: 1}
+    from {
+        top: 3em;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1
+    }
 }
-.imageRandom-3{
-    
-}
+
+.imageRandom-3 {}
 
 .work-watch-film {
     cursor: pointer;
     width: 130px;
     margin: auto;
 }
+
 .work-watch-film span {
     float: left;
     margin: 1em;
     font-size: 0.9em;
 }
+
 .work-watch-film svg {
     float: left;
     width: 30px;
 }
+
+
 /* .scrollLineUpper,
 .scrollLineLower {
     border-left: 1px solid;
@@ -1064,7 +1114,7 @@ img {
     .work-container-gallery {
         top: 11em;
     }
-    .nostyle.work-back-button{
+    .nostyle.work-back-button {
         display: none;
     }
     .work-back-button {
@@ -1168,7 +1218,7 @@ img {
     .imageRandom-3 {
         padding-bottom: 0%;
     }
-    .imageRandom-2{
+    .imageRandom-2 {
         margin-top: 0;
     }
     .slider .slide-track {
