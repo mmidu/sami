@@ -687,10 +687,10 @@ imageRandom-3 {
 
 .slider .slide-track {
     /*background-color: yellow;*/
-    -webkit-animation: enterscreen 10s linear, scroll 10s linear infinite;
-    -webkit-animation-delay: 0s, 10s;
-    animation: enterscreen 10s linear, scroll 10s linear infinite;
-    animation-delay: 0s, 10s;
+    -webkit-animation: frames-scroll-begin 0.750s linear forwards, scroll 10s linear infinite;
+    -webkit-animation-delay: 0s, 0s;
+    animation: frames-scroll-begin 0.750s linear forwards, scroll 10s linear infinite;
+    animation-delay: 0s, 0s;
     display: flex;
     width: calc(50em * 4);
     line-height: 8em;
