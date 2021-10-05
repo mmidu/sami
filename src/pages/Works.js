@@ -24,19 +24,6 @@ class Works extends Component {
     }
   }
 
-  parallaxScrollImages = () => {
-    for (let i = 0; i < this.workImages.length; i++) {
-      for (let workImage of this.workImages[i]) {
-        const boundingRect = workImage.getBoundingClientRect()
-        const isInViewport = this.getIsInViewport(boundingRect)
-        workImage.style.transform = 'translateY(' + boundingRect.top / window.innerHeight * 10 * i + '%)'
-        if(isInViewport) {
-          workImage.classList.add('inViewport')
-        }
-      }
-    }
-  }
-
   componentDidMount = () => {
     this.workImages = [
       document.getElementsByClassName('imageRandom-0'),
@@ -44,17 +31,31 @@ class Works extends Component {
       document.getElementsByClassName('imageRandom-2'),
       document.getElementsByClassName('imageRandom-3')
     ]
-    this.parallaxScrollImages()
     window.addEventListener('scroll', this.handleScroll)
-    this.forceUpdate()
+  }
+
+  componentWillUnmount = () => {
+    window.removeEventListener('scroll', this.handleScroll)
+
   }
 
   getIsInViewport = (boundingRect) => {
-    return boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
+    return boundingRect.top < window.innerHeight && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
   }
 
   handleScroll = () => {
-    this.parallaxScrollImages()
+    for (let i = 0; i < this.workImages.length; i++) {
+      for (let workImage of this.workImages[i]) {
+        const boundingRect = workImage.getBoundingClientRect()
+        const isInViewport = this.getIsInViewport(boundingRect)
+
+        if(isInViewport) {
+          workImage.classList.add('inViewport')
+        } else {
+          workImage.classList.remove('inViewport')
+        }
+      }
+    }
   }
 
   render() {
