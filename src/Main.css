@@ -109,7 +109,7 @@ a.nostyle:visited {
 .work-container-header {
     position: fixed;
     display: flex;
-    width: 81%;
+    width: 84.8%;
     height: 6em;
     right: 0;
 }
@@ -130,7 +130,7 @@ a.nostyle:visited {
     text-align: left;
     font-size: 8rem;
     font-weight: bold;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 2px #fff;
     -webkit-text-fill-color: transparent;
 }
 
@@ -146,7 +146,13 @@ a.nostyle:visited {
     font-family: 'roboto', 'Samsung Sharp Sans Bold', sans-serif;
     cursor: pointer !important;
 }
-
+.work-back-button svg{
+    
+}
+.work-back-button span {
+    margin: 0 0.5em;
+    font-size: 1em;
+}
 .work-container-gallery {
     height: calc(100% - 12em);
     white-space: nowrap;
@@ -363,24 +369,26 @@ a.nostyle:visited {
 
 .logo {
     position: absolute;
-    animation: slideDown 0.56s ease-out forwards;
+    animation: slideDown 0.7s ease-out forwards;
 }
 
 @-webkit-keyframes slideDown {
     0% {
-        -webkit-transform: translateY(-10em);
-        transform: translateY(-10em);
+        -webkit-transform: translateY(-2em);
+        transform: translateY(-2em);
+        opacity: 0;
     }
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
 @keyframes slideDown {
     0% {
-        -webkit-transform: translateY(-10em);
-        transform: translateY(-10em);
+        -webkit-transform: translateY(-2em);
+        transform: translateY(-2em);
     }
     100% {
         -webkit-transform: translateY(0);
@@ -455,8 +463,8 @@ a.nostyle:visited {
 }
 
 .contTxt {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 3%;
+    transform: unset;
     position: absolute;
     left: 15%;
 }
@@ -467,24 +475,37 @@ a.nostyle:visited {
 
 .txtAbout h2 {}
 
-.txtAbout p {}
-
-.txtContacts {}
-
-.txtContacts h2 {}
-
-.txtContacts span {}
-
-.txtContacts p {}
-
-txtContacts ul {
+.txtAbout p {
+    font-size: 3.4em;
+    color: #c4c4c4;
+}
+.txtAbout b {
+    color: #627477;
+}
+.txtContacts {
+    font-size: 3.4em;
+    color: #c4c4c4;
+}
+.txtContacts ul {
     list-style: none;
+    margin: 0;
 }
 
-txtContacts li {
+.txtContacts li {
+    margin: 0;
     display: block;
 }
-
+.txtContacts span {
+    display: block;
+    font-weight: 600;
+}
+.txtContacts a{
+    color:#627477;
+    transition: all 0.5s ease-out 0s;
+}
+.txtContacts a:hover{
+    color:#000;
+}
 .sideDx {
     width: 82%;
     height: auto;
@@ -530,25 +551,25 @@ imageRandom-3 {
 
 .imageRandom-0 {
     grid-column: 1/span 11;
-    padding-bottom: 12%;
+    padding-bottom: 7%;
     margin-top: 8vh;
 }
 
 .imageRandom-1 {
-    grid-column: 1/span 11;
-    padding-bottom: 12%;
-    margin-top: 8vh;
+    grid-column: 2/span 9;
+    padding-bottom: 10%;
+    margin-top: 5vh;
 }
 
 .imageRandom-2 {
     grid-column: 13/span 7;
-    margin-top: 0vh;
+    margin-top: -20vh;
     padding-bottom: 0%;
 }
 
 .imageRandom-3 {
-    grid-column: 3/span 4;
-    padding-bottom: 20%;
+    grid-column: 3/span 7;
+    padding-bottom: 15%;
 }
 
 .workTit {
@@ -566,7 +587,7 @@ imageRandom-3 {
 .workTit.hide {
     pointer-events: none;
     opacity: 0;
-    transition: .5s;
+    transition: .2s;
 }
 
 .workTit a {
@@ -880,20 +901,63 @@ img {
     }
 }
 
-.workImage {
-    opacity: 0;
+.workImage{
+    position: relative;
+    opacity: 1;
     transition: opacity 0.675s ease-out;
+    animation: showUPOne 1s ease-out forwards;
+    -webkit-animation: showUPTwo 1s;
 }
 
+@keyframes showUPOne {
+    from {top: 1em; opacity: 0;}
+    to {top: 0px; opacity: 1}
+}
+.imageRandom-0{
+    animation: showRandom-0 2s ease-out forwards;
+    -webkit-animation: showRandom-0 2s;
+}
+@keyframes showRandom-0 {
+    from {top: 3em; opacity: 0;}
+    to {top: 0px; opacity: 1}
+}
+.imageRandom-1{
+    animation: showRandom-1 2s ease-out forwards;
+    -webkit-animation: showRandom-0 2s;
+}
+@keyframes showRandom-1 {
+    from {top: 4em; opacity: 0;}
+    to {top: 0px; opacity: 1}
+}
+.imageRandom-2{
+    animation: showRandom-2 2s ease-out forwards;
+    -webkit-animation: showRandom-2 2s;
+}
+@keyframes showRandom-2 {
+    from {top: 3em; opacity: 0;}
+    to {top: 0px; opacity: 1}
+}
+.imageRandom-3{
+    
+}
 .workImage.inViewport {
     opacity: 1;
-    transition: opacity 0.675s ease-in;
+    transition: opacity 0.1s ease-in;
 }
-
 .work-watch-film {
     cursor: pointer;
+    width: 130px;
+    margin: auto;
 }
-
+.work-watch-film span {
+    float: left;
+    margin: 1em;
+    font-size: 0.9em;
+}
+.work-watch-film svg {
+    float: left;
+    width: 30px;
+}
 /* .scrollLineUpper,
 .scrollLineLower {
     border-left: 1px solid;
@@ -930,7 +994,8 @@ img {
     }
     .sideSx {
         margin: 1em 0em;
-        position: unset;
+        position: relative;
+        z-index: 100;
     }
     .logo {
         position: unset;
@@ -982,7 +1047,11 @@ img {
         padding: 0;
     }
     .imageRandom-3 {
-        margin-bottom: 8em;
+        margin-bottom: 5em;
+    }
+    #frames-scroll {
+        width: 95vw;
+        height: calc(85vw / 1.3);
     }
     .sideDx {
         width: 90%;
@@ -993,6 +1062,9 @@ img {
     }
     .work-container-gallery {
         top: 11em;
+    }
+    .nostyle.work-back-button{
+        display: none;
     }
     .work-back-button {
         position: relative;
@@ -1015,6 +1087,18 @@ img {
     }
     .slider .slide-track .slide {
         width: 30em;
+    }
+    .work-title {
+        position: relative;
+        cursor: pointer;
+        flex-grow: 1;
+        text-align: left;
+        font-size: 8rem;
+        font-weight: bold;
+        -webkit-text-fill-color: blanchedalmond;
+        mix-blend-mode: difference;
+        color: #fff;
+        -webkit-text-stroke-color: #fff;
     }
     @-webkit-keyframes enterscreen {
         0% {
@@ -1047,7 +1131,7 @@ img {
 
 @media only screen and (max-width: 40.063em) {
     .workTit {
-        top: 30%;
+        top: 23%;
         width: 90%;
         text-align: center;
     }
@@ -1055,7 +1139,7 @@ img {
         width: 90%;
     }
     .workTit a {
-        font-size: 3.6em;
+        font-size: 3.2em;
     }
     .sideDx {
         margin: 5em auto;
@@ -1068,6 +1152,23 @@ img {
     }
     .cta {
         font-size: 3em;
+    }
+    .videoModal {
+        top: 0;
+    }
+    .work-watch-film {
+        cursor: pointer;
+        width: 165px;
+        margin: auto;
+        background-color: #ffffff8c;
+        height: 50px;
+        padding: 0 1em;
+    }
+    .imageRandom-3 {
+        padding-bottom: 0%;
+    }
+    .imageRandom-2{
+        margin-top: 0;
     }
     .slider .slide-track {
         display: flex;

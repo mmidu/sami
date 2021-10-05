@@ -6,7 +6,7 @@ class Contacts extends Component {
         return (
             <TextLayout>
                 <div class="txtContacts">
-                    <h2>GOT QUESTIONS?</h2>
+                    GOT QUESTIONS?
                     <span>Let's talk</span>
                     <ul>
                         <li>Email: <a href="mailto:samischinaia@gmail.com">samischinaia@gmail.com</a></li>
