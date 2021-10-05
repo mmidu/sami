@@ -480,7 +480,9 @@ a.nostyle:visited {
     color: #c4c4c4;
 }
 .txtAbout b {
-    color: #627477;
+    color: transparent;
+    -webkit-text-stroke: 2px #848e92;
+    -webkit-text-fill-color: transparent;
 }
 .txtContacts {
     font-size: 3.4em;
@@ -496,8 +498,11 @@ a.nostyle:visited {
     display: block;
 }
 .txtContacts span {
+    color: transparent;
+    -webkit-text-stroke: 2px #848e92;
+    -webkit-text-fill-color: transparent;
     display: block;
-    font-weight: 600;
+    font-weight: 800;
 }
 .txtContacts a{
     color:#627477;
@@ -903,14 +908,10 @@ img {
 
 .workImage{
     position: relative;
-    opacity: 0;
-    transition: opacity 0.1s ease-out;
+    opacity: 1;
+    transition: opacity 0.675s ease-out;
     animation: showUPOne 1s ease-out forwards;
     -webkit-animation: showUPTwo 1s;
-}
-.workImage.inViewport {
-    opacity: 1;
-    transition: opacity 0.675s ease-in;
 }
 
 @keyframes showUPOne {
@@ -944,7 +945,10 @@ img {
 .imageRandom-3{
     
 }
-
+.workImage.inViewport {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+}
 .work-watch-film {
     cursor: pointer;
     width: 130px;
@@ -1178,6 +1182,20 @@ img {
     .slider .slide-track .slide {
         width: 22em;
     }
+    .contTxt {
+        top: 23%;
+        left: 0;
+        text-align: center;
+    }
+    .txtAbout {
+        width: 90%;
+        margin: auto;
+    }
+    .txtAbout p {
+        font-size: 1.9em;
+        color: #c4c4c4;
+    }
+    
     @-webkit-keyframes enterscreen {
         0% {
             -webkit-transform: translateX(calc(20em * 2));
