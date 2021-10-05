@@ -589,7 +589,7 @@ imageRandom-3 {
 }
 
 .imageRandom-3 {
-    grid-column: 3/span 7;
+    grid-column: 1/span 7;
     padding-bottom: 15%;
 }
 
@@ -928,14 +928,11 @@ img {
     transition: opacity 0.675s ease-out;
     animation: showUPOne 1s ease-out forwards;
     -webkit-animation: showUPTwo 1s;
-<<<<<<< HEAD
-=======
 }
 
 .workImage.inViewport {
     opacity: 1;
     transition: opacity 0.675s ease-in;
->>>>>>> origin/main
 }
 
 @keyframes showUPOne {
@@ -995,37 +992,32 @@ img {
         top: 0px;
         opacity: 1
     }
-}
-<<<<<<< HEAD
-.imageRandom-3{
-    
-}
-.workImage.inViewport {
-    opacity: 1;
-    transition: opacity 0.1s ease-in;
-}
-=======
+    .workImage.inViewport {
+        opacity: 1;
+        transition: opacity 0.1s ease-in;
+    }
 
-.imageRandom-3 {}
+    .imageRandom-3 {}
 
->>>>>>> origin/main
-.work-watch-film {
-    cursor: pointer;
-    width: 130px;
-    margin: auto;
-}
 
-.work-watch-film span {
-    float: left;
-    margin: 1em;
-    font-size: 0.9em;
-}
+    .imageRandom-3 {}
 
-.work-watch-film svg {
-    float: left;
-    width: 30px;
-}
+    .work-watch-film {
+        cursor: pointer;
+        width: 130px;
+        margin: auto;
+    }
 
+    .work-watch-film span {
+        float: left;
+        margin: 1em;
+        font-size: 0.9em;
+    }
+
+    .work-watch-film svg {
+        float: left;
+        width: 30px;
+    }
 
 /* .scrollLineUpper,
 .scrollLineLower {
@@ -1047,7 +1039,7 @@ img {
     height: 2.5em;
 } */
 
-
+}
 /*--------------------------------------------------------
 		MEDIA QUERYS
 -------------------------------------------------------------*/
