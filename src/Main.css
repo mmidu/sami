@@ -903,10 +903,14 @@ img {
 
 .workImage{
     position: relative;
-    opacity: 1;
-    transition: opacity 0.675s ease-out;
+    opacity: 0;
+    transition: opacity 0.1s ease-out;
     animation: showUPOne 1s ease-out forwards;
     -webkit-animation: showUPTwo 1s;
+}
+.workImage.inViewport {
+    opacity: 1;
+    transition: opacity 0.675s ease-in;
 }
 
 @keyframes showUPOne {
@@ -940,10 +944,7 @@ img {
 .imageRandom-3{
     
 }
-.workImage.inViewport {
-    opacity: 1;
-    transition: opacity 0.1s ease-in;
-}
+
 .work-watch-film {
     cursor: pointer;
     width: 130px;

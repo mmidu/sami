@@ -5,7 +5,7 @@ class Contacts extends Component {
     render() {
         return (
             <TextLayout>
-                <div class="txtContacts">
+                <div className="txtContacts">
                     GOT QUESTIONS?
                     <span>Let's talk</span>
                     <ul>

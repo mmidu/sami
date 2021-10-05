@@ -31,6 +31,7 @@ class Works extends Component {
       document.getElementsByClassName('imageRandom-2'),
       document.getElementsByClassName('imageRandom-3')
     ]
+    this.updateImageVisibility()
     window.addEventListener('scroll', this.handleScroll)
   }
 
@@ -44,6 +45,10 @@ class Works extends Component {
   }
 
   handleScroll = () => {
+    this.updateImageVisibility()
+  }
+
+  updateImageVisibility = () => {
     for (let i = 0; i < this.workImages.length; i++) {
       for (let workImage of this.workImages[i]) {
         const boundingRect = workImage.getBoundingClientRect()
@@ -51,8 +56,6 @@ class Works extends Component {
 
         if(isInViewport) {
           workImage.classList.add('inViewport')
-        } else {
-          workImage.classList.remove('inViewport')
         }
       }
     }
