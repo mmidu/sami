@@ -9,15 +9,17 @@ class Works extends Component {
 
     this.state = {
       workRefs: Object.keys(data).map(() => {
-        if(data.visible) {
+        if (data.visible) {
           return React.createRef()
         }
+        return null
       }),
       currentWork: 1,
       workTitles: Object.keys(data).map(title => {
-        if(data[title].visible){
+        if (data[title].visible) {
           return title
         }
+        return null
       })
     }
   }
@@ -25,8 +27,12 @@ class Works extends Component {
   parallaxScrollImages = () => {
     for (let i = 0; i < this.workImages.length; i++) {
       for (let workImage of this.workImages[i]) {
-        const bottom = workImage.getBoundingClientRect().top
-        workImage.style.transform = 'translateY(' + bottom / window.innerHeight * 10 * i + '%)'
+        const boundingRect = workImage.getBoundingClientRect()
+        const isInViewport = this.getIsInViewport(boundingRect)
+        workImage.style.transform = 'translateY(' + boundingRect.top / window.innerHeight * 10 * i + '%)'
+        if(isInViewport) {
+          workImage.classList.add('inViewport')
+        }
       }
     }
   }
@@ -43,6 +49,10 @@ class Works extends Component {
     this.forceUpdate()
   }
 
+  getIsInViewport = (boundingRect) => {
+    return boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
+  }
+
   handleScroll = () => {
     this.parallaxScrollImages()
   }
@@ -52,15 +62,15 @@ class Works extends Component {
       <SiteLayout>
         {
           Object.keys(data).map((elem, index) => {
-            if (data[elem].visible){
+            if (data[elem].visible) {
               return <Work
-              key={'work-' + index}
-              ref={this.state.workRefs[index]}
-              title={this.state.workTitles[index]}
-              images={data[elem].images}
-            />
+                key={'work-' + index}
+                ref={this.state.workRefs[index]}
+                title={this.state.workTitles[index]}
+                images={data[elem].images}
+              />
             }
-
+            return null
           })
         }
       </SiteLayout>

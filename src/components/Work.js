@@ -1,12 +1,22 @@
-import React, { Component, useEffect } from 'react'
+import React, { Component, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 
 const WorkImage = (props) => {
 
+    const [isInViewport, setIsInViewport] = useState(false)
 
+    const getIsInViewport = (boundingRect) => {
+        return boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
+    }
+    
     return (
-        <div className={'workImage imageRandom-' + props.index}>
+        <div ref={el => {
+            if (!el) return
+            const boundingRect = el.getBoundingClientRect()
+            setIsInViewport(getIsInViewport(boundingRect))
+
+          }} className={`workImage imageRandom-${props.index} ${isInViewport ? ' inViewport' : ''}`}>
             <img src={process.env.PUBLIC_URL + '/images/' + props.name} alt={'image-' + props.index} />
         </div>
     )
@@ -77,7 +87,7 @@ class Work extends Component {
                     {
                         this.props.images.map((elem, index) => {
                             return (
-                                <WorkImage key={index} index={index} name={elem}/>
+                                <WorkImage key={index} index={index} name={elem} />
                                 // <Parallax key={'image-' + index} className={'imageRandom-' + index} y={[index, index]} tagOuter='figure'>
                                 //     <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
                                 // </Parallax>

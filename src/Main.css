@@ -874,7 +874,14 @@ img {
     }
 }
 
+.workImage {
+    opacity: 0;
+}
 
+.workImage.inViewport {
+    opacity: 1;
+    transition: opacity 0.275s ease-in-out;
+}
 
 /* .scrollLineUpper,
 .scrollLineLower {
