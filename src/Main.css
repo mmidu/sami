@@ -890,6 +890,10 @@ img {
     transition: opacity 0.675s ease-in;
 }
 
+.work-watch-film {
+    cursor: pointer;
+}
+
 /* .scrollLineUpper,
 .scrollLineLower {
     border-left: 1px solid;

@@ -69,6 +69,7 @@ class Works extends Component {
                 ref={this.state.workRefs[index]}
                 title={this.state.workTitles[index]}
                 images={data[elem].images}
+                vimeo={data[elem].vimeo}
               />
             }
             return null
