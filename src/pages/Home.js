@@ -4,6 +4,7 @@ import VideoModal from '../components/VideoModal'
 import Landing from '../components/Landing'
 import HomeLayout from '../components/HomeLayout'
 import Cookies from 'universal-cookie'
+import data from '../works.json'
 
 class Home extends Component {
   
@@ -65,7 +66,7 @@ class Home extends Component {
           <VideoModal
             visibility={this.state.isVideoModalOn ? 'visible' : 'hidden'}
             toggleVideoModal={this.toggleVideoModal}
-            url='https://vimeo.com/3155182'
+            url={data['nope!'].vimeo}
           />
         </HomeLayout>
     )
