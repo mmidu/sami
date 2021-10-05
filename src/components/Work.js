@@ -1,5 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+
+
+const WorkImage = (props) => {
+
+
+    return (
+        <div className={'workImage imageRandom-' + props.index}>
+            <img src={process.env.PUBLIC_URL + '/images/' + props.name} alt={'image-' + props.index} />
+        </div>
+    )
+}
 
 class Work extends Component {
     ref = React.createRef()
@@ -9,7 +20,7 @@ class Work extends Component {
 
         this.state = {
             titleVisible: false,
-            hidden: true
+            hidden: true,
         }
     }
 
@@ -45,6 +56,7 @@ class Work extends Component {
             }
             return null
         })
+
     }
 
     getTitleVisibility = () => {
@@ -65,9 +77,11 @@ class Work extends Component {
                     {
                         this.props.images.map((elem, index) => {
                             return (
-                                <div key={'image-' + index} className={'imageRandom-' + index}>
-                                    <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
-                                </div>
+                                <WorkImage key={index} index={index} name={elem}/>
+                                // <Parallax key={'image-' + index} className={'imageRandom-' + index} y={[index, index]} tagOuter='figure'>
+                                //     <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
+                                // </Parallax>
+
                             )
                         })
                     }
