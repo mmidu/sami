@@ -60,10 +60,6 @@ class Home extends Component {
               <div className='slide cta cta-light' onClick={this.toggleVideoModal}>Watch NOPE!</div>
               <div className='slide cta cta-dark'><Link to='/works'>Watch Website</Link></div>
               <div className='slide cta cta-light' onClick={this.toggleVideoModal}>Watch NOPE!</div>
-              <div className='slide cta cta-dark'><Link to='/works'>Watch Website</Link></div>
-              <div className='slide cta cta-light' onClick={this.toggleVideoModal}>Watch NOPE!</div>
-              <div className='slide cta cta-dark'><Link to='/works'>Watch Website</Link></div>
-              <div className='slide cta cta-light' onClick={this.toggleVideoModal}>Watch NOPE!</div>
             </div>
           </div>
           <VideoModal
