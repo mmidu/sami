@@ -924,7 +924,7 @@ img {
 
 .workImage {
     position: relative;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.675s ease-out;
     animation: showUPOne 1s ease-out forwards;
     -webkit-animation: showUPTwo 1s;
