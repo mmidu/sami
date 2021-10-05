@@ -338,14 +338,20 @@ a.nostyle:visited {
     transform: rotate(-90deg) translateY(-5em);
 }
 
+.lateral li.works.shown {
+    transform: rotate(-90deg) translateY(0);
+    transition: 375ms transform 0.750s ease-out;
+}
+
+
 .lateral li.about.shown {
     transform: rotate(-90deg) translateY(0);
-    transition: 0.357s transform 0.5s ease-in;
+    transition: 750ms transform 0.750s ease-out;
 }
 
 .lateral li.contacts.shown {
     transform: rotate(-90deg) translateY(0);
-    transition: 0.765s transform 0.5s ease-in;
+    transition: 1125ms transform 0.750s ease-out;
 }
 
 .lateral li a {

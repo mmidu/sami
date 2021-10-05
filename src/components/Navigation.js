@@ -6,6 +6,7 @@ const Navigation = () => {
     const [className, setClassName] = useState('')
 
     const elements = [
+        'works',
         'about',
         'contacts'
     ]
