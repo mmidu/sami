@@ -14,11 +14,11 @@ class Contacts extends Component {
                     </ul>
                     <span>Partner and creative director</span>
                         <ul>
-                            <li><a href="https://hipcool.studio/" target="_blank">@ hipcool.studio</a></li>
+                            <li><a href="https://hipcool.studio/" target="_blank" rel="noreferrer">@ hipcool.studio</a></li>
                         </ul>    
                     <span>Films i like</span>
                         <ul> 
-                            <li><a href="https://www.instagram.com/bestindependentfilms/" target="_blank">@ bestindependentfilms</a></li>
+                            <li><a href="https://www.instagram.com/bestindependentfilms/" target="_blank" rel="noreferrer">@ bestindependentfilms</a></li>
                         </ul>    
                 </div>
             </TextLayout>

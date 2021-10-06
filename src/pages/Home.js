@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom'
 import VideoModal from '../components/VideoModal'
 import Landing from '../components/Landing'
 import HomeLayout from '../components/HomeLayout'
-import Cookies from 'universal-cookie'
+// import Cookies from 'universal-cookie'
 import data from '../works.json'
 
 function LinkedParagraph (props){
