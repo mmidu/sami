@@ -531,8 +531,8 @@ a.nostyle:visited {
     -webkit-text-fill-color: transparent;
     display: block;
     font-weight: 800;
+    margin: 0.7em 0 0 0;
 }
-
 .txtContacts a {
     color: #627477;
     transition: all 0.5s ease-out 0s;
@@ -707,9 +707,9 @@ imageRandom-3 {
 
 .slider .slide-track {
     /*background-color: yellow;*/
-    -webkit-animation: frames-scroll-begin 0.750s linear forwards, scroll 10s linear infinite;
+    -webkit-animation: frames-scroll-begin 0.750s linear forwards, scroll 20s linear infinite;
     -webkit-animation-delay: 0s, 0s;
-    animation: frames-scroll-begin 0.750s linear forwards, scroll 10s linear infinite;
+    animation: frames-scroll-begin 0.750s linear forwards, scroll 20s linear infinite;
     animation-delay: 0s, 0s;
     display: flex;
     width: calc(50em * 4);
@@ -753,28 +753,6 @@ img {
     }
     100% {
         opacity: 1;
-    }
-}
-
-@-webkit-keyframes enterscreen {
-    0% {
-        -webkit-transform: translateX(calc(50em * 2));
-        transform: translateX(calc(50em * 2));
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-
-@keyframes enterscreen {
-    0% {
-        -webkit-transform: translateX(calc(50em * 2));
-        transform: translateX(calc(50em * 2));
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
     }
 }
 
@@ -939,7 +917,7 @@ img {
 
 .workImage {
     position: relative;
-    opacity: 1;
+    opacity: 0;
     transition: opacity 0.675s ease-out;
     animation: showUPOne 1s ease-out forwards;
     -webkit-animation: showUPTwo 1s;
@@ -1005,35 +983,42 @@ img {
     }
     to {
         top: 0px;
-        opacity: 1
-    }
-    .workImage.inViewport {
         opacity: 1;
-        transition: opacity 0.1s ease-in;
     }
+}
 
-    .imageRandom-3 {}
+.workImage.inViewport {
+    opacity: 1;
+    transition: opacity 0.1s ease-in;
+}
 
+.imageRandom-3 {}
 
-    .imageRandom-3 {}
+.imageRandom-3 {}
 
-    .work-watch-film {
-        cursor: pointer;
-        width: 130px;
-        margin: auto;
-    }
+.work-watch-film {
+    width: 140px;
+    margin: 1.5em auto auto;
+    cursor: pointer;
+    transition: all 0.5s ease-out 0s;
+}
 
-    .work-watch-film span {
-        float: left;
-        margin: 1em;
-        font-size: 0.9em;
-    }
+.work-watch-film span {
+    float: left;
+    margin: 1em 0.5em 0 0em;
+}
 
-    .work-watch-film svg {
-        float: left;
-        width: 30px;
-    }
+.work-watch-film svg {
+    float: left;
+}
 
+.work-watch-film:hover {
+    opacity: 0.8;
+}
+.contactLink:hover{
+    -webkit-text-stroke: 2px #848e92 !important;
+    -webkit-text-fill-color: unset !important;
+}
 /* .scrollLineUpper,
 .scrollLineLower {
     border-left: 1px solid;
@@ -1054,7 +1039,10 @@ img {
     height: 2.5em;
 } */
 
-}
+
+/* } */
+
+
 /*--------------------------------------------------------
 		MEDIA QUERYS
 -------------------------------------------------------------*/
@@ -1198,20 +1186,29 @@ img {
         -webkit-text-fill-color: blanchedalmond;
         mix-blend-mode: difference;
         color: #fff;
+        text-align: center;
         -webkit-text-stroke-color: #fff;
     }
-    @-webkit-keyframes enterscreen {
-        0% {
-            -webkit-transform: translateX(calc(30em * 2));
-            transform: translateX(calc(30em * 2));
-        }
+    .work-container-gallery{
+        width: 90%;
     }
-    @keyframes enterscreen {
-        0% {
-            -webkit-transform: translateX(calc(30em * 2));
-            transform: translateX(calc(30em * 2));
-        }
+    .work-watch-film {
+        cursor: pointer;
+        width: 165px;
+        margin: auto;
+        background-color: #ffffff8c;
+        height: 69px;
+        padding: 0.5em 1em;
+        mix-blend-mode: difference;
     }
+    .work-watch-film svg {
+        float: left;
+        margin: 0.2em 0 0 0;
+    }
+    .work-container-footer {
+        bottom: 1em;
+    }
+
     @-webkit-keyframes scroll {
         100% {
             -webkit-transform: translateX(calc(-30em * 2));
@@ -1256,14 +1253,6 @@ img {
     .videoModal {
         top: 0;
     }
-    .work-watch-film {
-        cursor: pointer;
-        width: 165px;
-        margin: auto;
-        background-color: #ffffff8c;
-        height: 50px;
-        padding: 0 1em;
-    }
     .imageRandom-3 {
         padding-bottom: 0%;
     }
@@ -1297,7 +1286,9 @@ img {
     .txtContacts span {
         -webkit-text-stroke: 0.02em #848e92;
     }
-    
+    .work-title{
+        font-size: 3.2em;
+    }
     @-webkit-keyframes enterscreen {
         0% {
             -webkit-transform: translateX(calc(20em * 2));
