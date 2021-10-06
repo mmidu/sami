@@ -28,12 +28,12 @@ class Home extends Component {
   }
 
   componentDidMount = () => {
-    this.cookies = new Cookies()
-    if(this.cookies.get('visitedLanding') !== undefined) {
-      this.setState({
-        isLandingVisible: false
-      })
-    }
+    // this.cookies = new Cookies()
+    // if(this.cookies.get('visitedLanding') !== undefined) {
+    //   this.setState({
+    //     isLandingVisible: false
+    //   })
+    // }
   }
 
   componentWillUnmount = () => {
@@ -49,9 +49,11 @@ class Home extends Component {
   closeLanding = () => {
     this.setState({
       isLandingVisible: false
-    }, () => {
-      this.cookies.set('visitedLanding', true, { path: '/' })
-    })
+    }, 
+    // () => {
+    //   this.cookies.set('visitedLanding', true, { path: '/' })
+    // }
+    )
   }
 
   render = () => {
