@@ -531,8 +531,8 @@ a.nostyle:visited {
     -webkit-text-fill-color: transparent;
     display: block;
     font-weight: 800;
+    margin: 0.7em 0 0 0;
 }
-
 .txtContacts a {
     color: #627477;
     transition: all 0.5s ease-out 0s;
@@ -1015,8 +1015,10 @@ img {
 .work-watch-film:hover {
     opacity: 0.8;
 }
-
-
+.contactLink:hover{
+    -webkit-text-stroke: 2px #848e92 !important;
+    -webkit-text-fill-color: unset !important;
+}
 /* .scrollLineUpper,
 .scrollLineLower {
     border-left: 1px solid;
