@@ -1,10 +1,16 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'    
 import VideoModal from '../components/VideoModal'
 import Landing from '../components/Landing'
 import HomeLayout from '../components/HomeLayout'
 import Cookies from 'universal-cookie'
 import data from '../works.json'
+
+function LinkedParagraph (props){
+  const history = useHistory();
+
+  return <p className={props.className} onClick={()=> history.push(props.path)}>{props.children}</p>
+}
 
 class Home extends Component {
   
@@ -55,7 +61,24 @@ class Home extends Component {
         <Landing action={this.closeLanding}/>
         :
         <HomeLayout isLandingVisible={this.state.isLandingVisible}>
-          <div className='slider'>
+          <div className='slider-container'>
+            <div className='slider-2'>
+              <div className='slide-track-2'>
+                <LinkedParagraph className='slide-cta' path='/works'>Watch Website</LinkedParagraph>
+                <p className='slide-cta light' onClick={this.toggleVideoModal}>Watch NOPE!</p>
+              </div>
+              <div className='slide-track-2'>
+                <LinkedParagraph className='slide-cta' path='/works'>Watch Website</LinkedParagraph>
+                <p className='slide-cta light' onClick={this.toggleVideoModal}>Watch NOPE!</p>
+              </div>
+                <div className='slide-track-2'>
+                <LinkedParagraph className='slide-cta' path='/works'>Watch Website</LinkedParagraph>
+                <p className='slide-cta light' onClick={this.toggleVideoModal}>Watch NOPE!</p>
+              </div>
+            </div>
+
+          </div>
+          {/* <div className='slider'>
             <div className='slide-track'>
               <div className='slide cta cta-dark'><Link to='/works'>Watch Website</Link></div>
               <div className='slide cta cta-light' onClick={this.toggleVideoModal}>Watch NOPE!</div>
@@ -63,7 +86,7 @@ class Home extends Component {
               <div className='slide cta cta-light' onClick={this.toggleVideoModal}>Watch NOPE!</div>
               <div className='slide cta cta-dark'><Link to='/works'>Watch Website</Link></div>
             </div>
-          </div>
+          </div> */}
           <VideoModal
             visibility={this.state.isVideoModalOn ? 'visible' : 'hidden'}
             toggleVideoModal={this.toggleVideoModal}
