@@ -977,14 +977,16 @@ img {
 .workImage {
     position: relative;
     opacity: 0;
-    transition: opacity 0.675s ease-out;
+    /* transition: opacity 0.675s ease-out; */
     animation: showUPOne 1s ease-out forwards;
+    top: -1em;
     -webkit-animation: showUPTwo 1s;
 }
 
 .workImage.inViewport {
     opacity: 1;
-    transition: opacity 0.675s ease-in;
+    top: 0;
+    transition: 0.675s ease-in;
 }
 
 @keyframes showUPOne {
@@ -1044,11 +1046,6 @@ img {
         top: 0px;
         opacity: 1;
     }
-}
-
-.workImage.inViewport {
-    opacity: 1;
-    transition: opacity 0.1s ease-in;
 }
 
 .imageRandom-3 {}
