@@ -393,6 +393,7 @@ a.nostyle:visited {
 }
 
 .logo {
+    opacity: 0;
     position: absolute;
     animation: slideDown 0.7s ease-out forwards;
 }
@@ -414,10 +415,12 @@ a.nostyle:visited {
     0% {
         -webkit-transform: translateY(-2em);
         transform: translateY(-2em);
+        opacity: 0;
     }
     100% {
         -webkit-transform: translateY(0);
         transform: translateY(0);
+        opacity: 1;
     }
 }
 
