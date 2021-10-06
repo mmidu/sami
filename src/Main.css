@@ -1074,6 +1074,23 @@ img {
 .work-watch-film:hover {
     opacity: 0.8;
 }
+
+.coming-soon-film {
+    width: 140px;
+    margin: 1.5em auto auto;
+    cursor: pointer;
+    transition: all 0.5s ease-out 0s;
+}
+
+.coming-soon-film span {
+    float: center;
+    margin: 1em 0.5em 0 0em;
+}
+
+.coming-soon-film:hover {
+    cursor: default;
+}
+
 .contactLink:hover{
     -webkit-text-stroke: 2px #848e92 !important;
     -webkit-text-fill-color: unset !important;

@@ -72,7 +72,9 @@ const Work = (props) => {
                                         <path id="Icon_ionic-ios-arrow-forward" data-name="Icon ionic-ios-arrow-forward" d="M16.914,13.289l-5.37-5.366a1.01,1.01,0,0,1,0-1.432,1.023,1.023,0,0,1,1.436,0l6.084,6.08a1.012,1.012,0,0,1,.03,1.4l-6.109,6.122a1.014,1.014,0,0,1-1.436-1.432Z" transform="translate(1001.004 1008.804)" />
                                     </g>
                                 </svg>
-                            </div> : null
+                            </div> : <div className='coming-soon-film'>
+                                <span>Coming soon</span>
+                            </div>
                         }
 
                     </div>
