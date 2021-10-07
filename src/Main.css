@@ -117,7 +117,7 @@ a.nostyle:visited {
 }
 
 .work-container-header {
-    position: fixed;
+    position: initial;
     display: flex;
     width: 84.8%;
     height: 6em;
@@ -125,12 +125,13 @@ a.nostyle:visited {
 }
 
 .work-container-footer {
-    width: 100%;
+    width: 82%;
     position: fixed;
     bottom: 0;
     height: 6em;
-    right: 0;
+    right: ;
     text-align: center;
+    margin: auto;
 }
 .work-watch-film {
     width: 140px;
@@ -149,14 +150,18 @@ a.nostyle:visited {
     opacity: 0.8;
 }
 .work-title {
-    position: relative;
+    position: absolute;
     cursor: pointer;
     flex-grow: 1;
-    text-align: left;
+    text-align: center;
     font-size: 10rem;
-    -webkit-text-stroke: 0.02em #fff;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: unset;
+    -webkit-text-fill-color: #fff;
     font-family: Samsung Sharp Sans Bold;
+    top: 0%;
+    mix-blend-mode: difference;
+    transform: translateX(-50%);
+    left: 50%;
 }
 
 .nostyle.work-back-button {
@@ -190,7 +195,7 @@ a.nostyle:visited {
 
 .work-container-gallery img {
     display: inline;
-    margin: 0px 3em;
+    margin: 0px 0em;
     padding: 0px;
     vertical-align: middle;
     height: 100%;
@@ -507,7 +512,13 @@ a.nostyle:visited {
     font-size: 3.4em;
     color: #c4c4c4;
 }
-
+.txtAbout a {
+    color: #627477;
+    transition: all 0.5s ease-out 0s;
+}
+.txtAbout a:hover {
+    color: #000;
+}
 .txtAbout b {
     color: transparent;
     -webkit-text-stroke: 2px #848e92;
@@ -1256,7 +1267,7 @@ img {
         cursor: pointer;
         flex-grow: 1;
         text-align: left;
-        font-size: 8rem;
+        font-size: 5rem;
         font-weight: bold;
         -webkit-text-fill-color: blanchedalmond;
         mix-blend-mode: difference;
@@ -1271,19 +1282,40 @@ img {
         cursor: pointer;
         width: 165px;
         margin: auto;
-        background-color: #ffffff8c;
         height: 69px;
         padding: 0.5em 1em;
         mix-blend-mode: difference;
+        color: #fff;
     }
-    .work-watch-film svg {
+    .work-watch-film svg g g {
         float: left;
-        margin: 0.2em 0 0 0;
+        mix-blend-mode: difference;
+        fill: #fff;
+    }
+    .slide-cta{
+        font-size: 3em;
+    }
+    .videoModal {
+        top: 0%;
+        padding: 2em 0 0;
     }
     .work-container-footer {
+        position: absolute;
         bottom: 1em;
+        width: 90%;
     }
-
+    .exit {
+        text-align: center;
+        color: #fff;
+        margin: 1em auto;
+        left: 50%;
+        position: absolute;
+        font-weight: 600;
+        font-size: 1em;
+        transition: all 0.5s ease-out 0s;
+        transform: translateY(-50%);
+        bottom: 5%;
+    }
     @-webkit-keyframes scroll {
         0% {
             -webkit-transform: translateZ(0);
@@ -1358,8 +1390,7 @@ img {
         text-align: center;
     }
     .txtAbout {
-        width: 90%;
-        margin: auto;
+        margin-bottom: 1.5em;
     }
     .txtAbout p {
         font-size: 1.9em;
@@ -1368,12 +1399,20 @@ img {
     .txtContacts {
         font-size: 1.9em;
         color: #c4c4c4;
+        margin-bottom: 1.5em;
     }
     .txtContacts span {
         -webkit-text-stroke: 0.02em #848e92;
     }
+    .slide-cta{
+        font-size: 2.5em;
+    }
     .work-title{
         font-size: 3.2em;
+    }
+    .exit {
+        left: 40%;
+        bottom: 15%;
     }
     @-webkit-keyframes enterscreen {
         0% {
