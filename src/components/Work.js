@@ -16,7 +16,9 @@ const WorkImage = (props) => {
             const boundingRect = el.getBoundingClientRect()
             setIsInViewport(getIsInViewport(boundingRect))
 
-          }} className={`workImage imageRandom-${props.index} ${isInViewport ? ' inViewport' : ''}`}>
+          }} className={`workImage imageRandom-${props.index} ${isInViewport ? ' inViewport' : ''}`}
+            onClick={props.onClick}
+          >
             <img src={process.env.PUBLIC_URL + '/images/' + props.name} alt={'image-' + props.index} />
         </div>
     )
@@ -80,14 +82,14 @@ class Work extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className={`workTit ${this.state.titleVisible ? 'play' : 'stop hide'}`}>
+                <div className={`workTit ${this.state.titleVisible ? 'play' : 'stop hide'} ${this.props.title.length > 10 ? 'longTitle' : ''}`}>
                     <Link to={'/works/' + this.props.title.toLowerCase()}>{this.props.title.toUpperCase()}</Link>
                 </div>
                 <div ref={this.ref} className='blockWork'>
                     {
                         this.props.images.map((elem, index) => {
                             return (
-                                <WorkImage key={index} index={index} name={elem} />
+                                <WorkImage key={index} index={index} name={elem} onClick={() => {window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase()}}/>
                                 // <Parallax key={'image-' + index} className={'imageRandom-' + index} y={[index, index]} tagOuter='figure'>
                                 //     <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
                                 // </Parallax>
