@@ -19,7 +19,7 @@ const WorkImage = (props) => {
           }} className={`workImage imageRandom-${props.index} ${isInViewport ? ' inViewport' : ''}`}
             onClick={props.onClick}
           >
-            <img src={process.env.PUBLIC_URL + '/images/' + props.name} alt={'image-' + props.index} />
+            <img src={process.env.PUBLIC_URL + '/images/' + props.folder + '/' + props.name} alt={'image-' + props.index} />
         </div>
     )
 }
@@ -88,8 +88,10 @@ class Work extends Component {
                 <div ref={this.ref} className='blockWork'>
                     {
                         this.props.images.map((elem, index) => {
+                            console.log(this.props)
                             return (
-                                <WorkImage key={index} index={index} name={elem} onClick={() => {window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase()}}/>
+                                
+                                <WorkImage key={index} index={index} folder={this.props.images_folder} name={elem} onClick={() => {window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase()}}/>
                                 // <Parallax key={'image-' + index} className={'imageRandom-' + index} y={[index, index]} tagOuter='figure'>
                                 //     <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
                                 // </Parallax>

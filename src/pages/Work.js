@@ -10,6 +10,8 @@ const Work = (props) => {
     const [isVideoModalOn, setIsVideoModalOn] = useState(false)
     const [work] = useState(data[props.match.params.name])
 
+    const images = work.images_detail ?? work.images
+
     const scrollHorizontally = (e) => {
         e = window.event || e
         var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)))
@@ -65,11 +67,11 @@ const Work = (props) => {
                 </Helmet>}
                 <div className='work-container'>
                     <div ref={galleryRef} className='work-container-gallery' onWheel={scrollHorizontally}>
-                        {
-                            work.images.map((elem, index) => {
+                        {   
+                            images.map((elem, index) => {
                                 return <img
                                     key={'image-' + index}
-                                    src={process.env.PUBLIC_URL + '/images/' + elem}
+                                    src={process.env.PUBLIC_URL + '/images/' + work.images_folder + '/' + elem}
                                     alt={'image-' + index}
                                 />
                             })
