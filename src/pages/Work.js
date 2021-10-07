@@ -27,9 +27,38 @@ const Work = (props) => {
                 {<Helmet>
                     <style>
                         {`
-                        body {
-                            background: transparent linear-gradient(129deg, #FCFDED 0%, #D9CAFC 100%) 0% 0% no-repeat padding-box;
+                        body{
+                            /*GRADIENT*/
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat scroll 0 0;
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat scroll 0 0;
+                            background: rgba(0, 0, 0, 0) linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat scroll 0 0;
+                            background: linear-gradient(0deg, #fffcf1, #D9CAFC);
+                                background-size: auto;
                             overflow: hidden;
+                            background-size: 600% 600%;
+                            -webkit-animation: horizon 11s ease infinite;
+                            -moz-animation: horizon 11s ease infinite;
+                            animation: horizon 11s ease infinite;
+                        }
+                        @-webkit-keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
+                        }
+                        @-moz-keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
+                        }
+                        @-o-keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
+                        }
+                        @keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
                         }
                     `}
                     </style>
