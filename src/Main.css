@@ -648,10 +648,10 @@ imageRandom-3 {
 
 .workTit.play a {
     /* opacity: 1 !important;  */
-    -moz-animation: spinVertical .5s ease-out .5s forwards;
-    -o-animation: spinVertical .5s ease-out .5s forwards;
-    -webkit-animation: spinVertical .5s ease-out .5s forwards;
-    animation: spinVertical .5s ease-out .5s forwards;
+    -moz-animation: spinVertical .2s ease-out .2s forwards;
+    -o-animation: spinVertical .2s ease-out .2s forwards;
+    -webkit-animation: spinVertical .2s ease-out .2s forwards;
+    animation: spinVertical .2s ease-out .2s forwards;
 }
 
 @keyframes spinVertical {

@@ -38,9 +38,9 @@ const Work = (props) => {
                                 background-size: auto;
                             overflow: hidden;
                             background-size: 600% 600%;
-                            -webkit-animation: horizon 11s ease infinite;
-                            -moz-animation: horizon 11s ease infinite;
-                            animation: horizon 11s ease infinite;
+                            -webkit-animation: horizon 8s ease infinite;
+                            -moz-animation: horizon 8s ease infinite;
+                            animation: horizon 8s ease infinite;
                         }
                         @-webkit-keyframes horizon {
                             0%{background-position:59% 0%}
