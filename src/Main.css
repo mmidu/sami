@@ -1316,9 +1316,6 @@ img {
         transform: translateY(-50%);
         bottom: 5%;
     }
-    #root::before{
-        position: unset;
-    }
     @-webkit-keyframes scroll {
         0% {
             -webkit-transform: translateZ(0);
@@ -1391,7 +1388,6 @@ img {
         top: 23%;
         left: 0;
         text-align: center;
-        margin-bottom: 3em;
     }
     .txtAbout p {
         font-size: 1.9em;
