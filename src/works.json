@@ -1,91 +1,161 @@
 {
     "nope!": {
         "visible": true,
+        "images_folder": "nope",
         "images": [
-            "nope/AA029.jpg",
-            "nope/img20210526_0122.jpg",
-            "nope/img20210526_0124.jpg",
-            "nope/AA023.jpg"
+            "AA029.jpg",
+            "img20210526_0122.jpg",
+            "img20210526_0124.jpg",
+            "AA023.jpg"
+        ],
+        "images_detail": [
+            "AA029.jpg",
+            "img20210526_0122.jpg",
+            "img20210526_0124.jpg",
+            "AA023.jpg",
+            "img20210526_0128.jpg",
+            "img20210526_0132.jpg",
+            "locandina-nope2.jpg"
         ],
         "vimeo": "https://vimeo.com/623593122"
     },
     "nike": {
         "visible": true,
+        "images_folder": "nike",
         "images": [
-            "nike/vlcsnap-2021-09-24-16h26m18s056.jpg",
-            "nike/vlcsnap-2021-09-24-16h26m38s783.jpg",
-            "nike/vlcsnap-2021-09-24-16h27m39s923.jpg",
-            "nike/vlcsnap-2021-09-24-16h27m37s117.jpg"
+            "vlcsnap-2021-09-24-16h26m18s056.jpg",
+            "vlcsnap-2021-09-24-16h26m38s783.jpg",
+            "vlcsnap-2021-09-24-16h27m39s923.jpg",
+            "vlcsnap-2021-09-24-16h27m37s117.jpg"
+        ],
+        "images_detail": [
+            "vlcsnap-2021-09-24-16h26m18s056.jpg",
+            "vlcsnap-2021-09-24-16h26m38s783.jpg",
+            "vlcsnap-2021-09-24-16h27m39s923.jpg",
+            "vlcsnap-2021-09-24-16h27m37s117.jpg",
+            "vlcsnap-2021-09-24-16h28m05s625.jpg",
+            "vlcsnap-2021-09-24-16h28m09s207.jpg"
         ],
         "vimeo": null
     },
     "ventiseidieci": {
         "visible": true,
+        "images_folder": "2610",
         "images": [
-            "2610/DSCF1425.jpg",
-            "2610/DSCF1432.jpg",
-            "2610/DSCF1440.jpg",
-            "2610/DSCF1498.jpg"
+            "DSCF1425.jpg",
+            "DSCF1432.jpg",
+            "DSCF1440.jpg",
+            "DSCF1498.jpg"
+        ],
+        "images_detail": [
+            "DSCF1425.jpg",
+            "DSCF1432.jpg",
+            "DSCF1440.jpg",
+            "DSCF1498.jpg",
+            "DSCF1508.jpg",
+            "DSCF1659.jpg",
+            "DSCF1696.jpg"
         ],
         "vimeo": null
     },
     "zma": {
         "visible": true,
+        "images_folder": "zma",
         "images": [
-            "zma/zmaOne.jpg",
-            "zma/zmaTwo.jpg",
-            "zma/zmaThree.jpg",
-            "zma/zmaFour.jpg"
+            "zmaOne.jpg",
+            "zmaTwo.jpg",
+            "zmaThree.jpg",
+            "zmaFour.jpg"
+        ],
+        "images_detail": [
+            "zmaOne.jpg",
+            "zmaTwo.jpg",
+            "zmaThree.jpg",
+            "zmaFour.jpg",
+            "5-zma.jpg",
+            "6-zma.jpg"
         ],
         "vimeo": null
     },
     "pompea": {
         "visible": true,
+        "images_folder": "pompea",
         "images": [
-            "pompea/Schermata-2021-09-24-alle-16.45.50.jpg",
-            "pompea/Schermata-2021-09-24-alle-16.47.45.jpg",
-            "pompea/Schermata-2021-09-24-alle-16.48.40.jpg",
-            "pompea/Schermata-2021-09-24-alle-16.48.54.jpg"
+            "Schermata-2021-09-24-alle-16.45.50.jpg",
+            "Schermata-2021-09-24-alle-16.47.45.jpg",
+            "Schermata-2021-09-24-alle-16.48.40.jpg",
+            "Schermata-2021-09-24-alle-16.48.54.jpg"
+        ],
+        "images_detail": [
+            "Schermata-2021-09-24-alle-16.45.50.jpg",
+            "Schermata-2021-09-24-alle-16.47.45.jpg",
+            "Schermata-2021-09-24-alle-16.48.40.jpg",
+            "Schermata-2021-09-24-alle-16.48.54.jpg",
+            "Schermata-2021-09-24-alle-16.50.05.jpg",
+            "Schermata-2021-09-24-alle-16.51.15.jpg"
         ],
         "vimeo": "https://vimeo.com/606395383"
     },
     "durex": {
         "visible": true,
+        "images_folder": "durex",
         "images": [
-            "durex/12A_00955.jpg",
-            "durex/13A_00956.jpg",
-            "durex/14A_00957.jpg",
-            "durex/17A_00960.jpg"
+            "12A_00955.jpg",
+            "13A_00956.jpg",
+            "14A_00957.jpg",
+            "17A_00960.jpg"
         ],
         "vimeo": "https://vimeo.com/508371897"
     },
     "yes milano": {
         "visible": true,
+        "images_folder": "yesmilano",
         "images": [
-            "yesmilano/DSCF4589.jpg",
-            "yesmilano/DSCF4371.jpg",
-            "yesmilano/DSCF4384.jpg",
-            "yesmilano/DSCF4524.jpg"
+            "DSCF4589.jpg",
+            "DSCF4371.jpg",
+            "DSCF4384.jpg",
+            "DSCF4524.jpg"
+        ],
+        "images_detail": [
+            "DSCF4589.jpg",
+            "DSCF4371.jpg",
+            "DSCF4384.jpg",
+            "DSCF4524.jpg",
+            "DSCF4367.jpg",
+            "DSCF4598.jpg",
+            "DSCF4604.jpg",
+            "DSCF4616.jpg",
+            "DSCF4619.jpg"
         ],
         "vimeo": "https://vimeo.com/438645593"
     },
     "enel x": {
         "visible": true,
+        "images_folder": "enel",
         "images": [
-            "enel/DSCF4935.jpg",
-            "enel/DSCF4993.jpg",
-            "enel/DSCF5015.jpg",
-            "enel/DSCF5028.jpg"
+            "DSCF4935.jpg",
+            "DSCF4993.jpg",
+            "DSCF5015.jpg",
+            "DSCF5028.jpg"
         ],
         "vimeo": "https://vimeo.com/478433798"
     },
     "personal": {
         "visible": true,
+        "images_folder": "personal",
         "images": [
-            "personal/Ryiadhkid2.jpg",
-            "personal/18A_00479.jpg",
-            "personal/27A_00970.jpg",
-            "personal/17A_00478.jpg"
+            "Ryiadhkid2.jpg",
+            "18A_00479.jpg",
+            "27A_00970.jpg",
+            "17A_00478.jpg"
+        ],
+        "images_detail": [
+            "Ryiadhkid2.jpg",
+            "18A_00479.jpg",
+            "27A_00970.jpg",
+            "17A_00478.jpg",
+            "_1A_00462-3.jpg",
+            "_2A_00463.jpg"
         ],
         "vimeo": null
     }

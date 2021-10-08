@@ -71,6 +71,7 @@ class Works extends Component {
                 key={'work-' + index}
                 ref={this.state.workRefs[index]}
                 title={this.state.workTitles[index]}
+                images_folder={data[elem].images_folder}
                 images={data[elem].images}
                 vimeo={data[elem].vimeo}
               />

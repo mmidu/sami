@@ -1316,6 +1316,9 @@ img {
         transform: translateY(-50%);
         bottom: 5%;
     }
+    #root::before{
+        position: unset;
+    }
     @-webkit-keyframes scroll {
         0% {
             -webkit-transform: translateZ(0);
