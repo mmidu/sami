@@ -1317,7 +1317,10 @@ img {
         bottom: 5%;
     }
     #root::before{
-        display: unset;
+        position: unset;
+    }
+    .coming-soon-film span{
+        color: #fff;
     }
     @-webkit-keyframes scroll {
         0% {
