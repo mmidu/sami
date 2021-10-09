@@ -908,9 +908,9 @@ img {
 
 .scrollLine.idle {
     animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
-    animation-delay: 0, 1s;
+    animation-delay: -0.2s, 0.2s;
     -webkit-animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
-    -webkit-animation-delay: 0s, 1s;
+    -webkit-animation-delay: -0.2s, 0.2s;
 }
 
 .scrollLine.scrolled {

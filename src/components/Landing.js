@@ -44,12 +44,13 @@ class Landing extends Component {
             if (index >= this.animation.maxTotalFrame) {
                 this.canvasRef.current.className += 'canvasZoom'
                 document.getElementById('root').className = 'canvasZoom'
-                setTimeout(() => {
-                    this.props.action()
-                    document.getElementById('root').className = ''
-                }, 1200)
                 this.setState({
                     active: false
+                }, () => {
+                    setTimeout(() => {
+                        this.props.action()
+                        document.getElementById('root').className = ''
+                    }, 1200)
                 })
             }
             this.img.src = this.animation.currentFrame(index)
