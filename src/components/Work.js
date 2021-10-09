@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react'
-
+import _ from "lodash"
 
 const WorkImage = (props) => {
 
@@ -36,7 +36,7 @@ class Work extends Component {
     }
 
     componentDidMount() {
-        window.addEventListener('scroll', this.handleScroll)
+        window.addEventListener('scroll', _.debounce(this.handleScroll, 50))
         const titleVisible = this.getTitleVisibility()
         // this.setState({
         //     titleVisible: titleVisible,

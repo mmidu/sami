@@ -4,8 +4,6 @@ import Footer from '../components/Footer'
 import SiteLayout from '../components/SiteLayout'
 import Work from '../components/Work'
 import data from '../works.json'
-import { Scrollbar } from 'smooth-scrollbar-react'
-import ScrollContainer from '../components/ScrollContainer'
 
 class Works extends Component {
   constructor() {
@@ -55,6 +53,7 @@ class Works extends Component {
   }
 
   setVisibleTitle = (title) => {
+    // this.
     this.setState(prevState => {
       if (prevState.titleClasses !== 'workTit stop hide') {
         return {
