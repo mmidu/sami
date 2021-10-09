@@ -89,7 +89,6 @@ const Work = (props) => {
                     </div>
 
                     <div className='work-container-footer'>
-                        {console.log(work.vimeo)}
                         {
                             
                             work.vimeo ? <div className='work-watch-film' onClick={toggleVideoModal}>

@@ -73,8 +73,8 @@ class Work extends Component {
 
     getTitleVisibility = () => {
         if (this.ref.current) {
+            
             let boundingRect = this.ref.current.getBoundingClientRect()
-
             return boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
         }
     }
@@ -88,7 +88,7 @@ class Work extends Component {
                 <div ref={this.ref} className='blockWork'>
                     {
                         this.props.images.map((elem, index) => {
-                            console.log(this.props)
+                            // console.log(this.props)
                             return (
                                 
                                 <WorkImage key={index} index={index} folder={this.props.images_folder} name={elem} onClick={() => {window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase()}}/>

@@ -54,7 +54,7 @@ class Works extends Component {
         const boundingRect = workImage.getBoundingClientRect()
         const isInViewport = this.getIsInViewport(boundingRect)
 
-        if(isInViewport) {
+        if (isInViewport) {
           workImage.classList.add('inViewport')
         }
       }
@@ -64,21 +64,21 @@ class Works extends Component {
   render() {
     return (
       <SiteLayout>
-        {
-          Object.keys(data).map((elem, index) => {
-            if (data[elem].visible) {
-              return <Work
-                key={'work-' + index}
-                ref={this.state.workRefs[index]}
-                title={this.state.workTitles[index]}
-                images_folder={data[elem].images_folder}
-                images={data[elem].images}
-                vimeo={data[elem].vimeo}
-              />
-            }
-            return null
-          })
-        }
+          {
+            Object.keys(data).map((elem, index) => {
+              if (data[elem].visible) {
+                return <Work
+                  key={'work-' + index}
+                  ref={this.state.workRefs[index]}
+                  title={this.state.workTitles[index]}
+                  images_folder={data[elem].images_folder}
+                  images={data[elem].images}
+                  vimeo={data[elem].vimeo}
+                />
+              }
+              return null
+            })
+          }
       </SiteLayout>
     )
   }
