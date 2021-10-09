@@ -110,6 +110,11 @@ a.nostyle:visited {
     cursor: auto;
 }
 
+.footer {
+    text-align: center;
+    cursor: pointer;
+}
+
 .row {
     width: 100%;
     margin-left: auto;
@@ -132,7 +137,7 @@ a.nostyle:visited {
     position: fixed;
     bottom: 0;
     height: 6em;
-    right: ;
+    /* right: ; */
     text-align: center;
     margin: auto;
 }
@@ -907,9 +912,9 @@ img {
 }
 
 .scrollLine.idle {
-    animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s linear /*cubic-bezier(0.76, 0, 0.3, 1)*/ forwards infinite;
     animation-delay: -0.2s, 0.2s;
-    -webkit-animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s cubic-bezier(0.76, 0, 0.3, 1) forwards infinite;
+    -webkit-animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s linear /*cubic-bezier(0.76, 0, 0.3, 1)*/ forwards infinite;
     -webkit-animation-delay: -0.2s, 0.2s;
 }
 
@@ -952,9 +957,9 @@ img {
     0% {
         background-position: 0 0em;
     }
-    75% {
+    /* 75% {
         background-position: 0 0;
-    }
+    } */
     100% {
         background-position: 0 4.5em;
     }

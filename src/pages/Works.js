@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 import SiteLayout from '../components/SiteLayout'
 import Work from '../components/Work'
 import data from '../works.json'
 
 class Works extends Component {
+  workTitleRef = React.createRef()
+
   constructor() {
     super()
-
     this.state = {
       workRefs: Object.keys(data).map(() => {
         if (data.visible) {
@@ -20,8 +23,11 @@ class Works extends Component {
           return title
         }
         return null
-      })
+      }),
+      visibleTitle: null,
+      titleClasses: 'workTit play'
     }
+    this.setVisibleTitle = this.setVisibleTitle.bind(this)
   }
 
   componentDidMount = () => {
@@ -48,6 +54,45 @@ class Works extends Component {
     this.updateImageVisibility()
   }
 
+  setVisibleTitle = (title) => {
+    this.setState(prevState => {
+      if (prevState.titleClasses !== 'workTit stop hide') {
+        return {
+          titleClasses: 'workTit stop hide'
+        }
+      }
+    }, () => {
+      setTimeout(() => {
+        this.setState({
+          visibleTitle: title,
+          titleClasses: 'workTit play'
+        })
+      }, 500)
+    })
+    // this.setState({
+    //   titleClasses: 'workTit stop hide'
+    // }, () => {
+    //   setTimeout(() => {
+    //     this.setState({
+    //       visibleTitle: title,
+    //       titleClasses: 'workTit play'
+    //     })
+    //   }, 500)
+    // })
+
+    // if(this.workTitleRef.current) {
+    //   this.workTitleRef.current.className = 'workTit stop hide'
+    //   setTimeout(() => {
+    //     this.setState({
+    //       visibleTitle: title
+    //     }, () => {
+    //       this.workTitleRef.current.className = 'workTit play'
+    //     })
+    //   }, 500)
+    // }
+
+  }
+
   updateImageVisibility = () => {
     for (let i = 0; i < this.workImages.length; i++) {
       for (let workImage of this.workImages[i]) {
@@ -64,21 +109,31 @@ class Works extends Component {
   render() {
     return (
       <SiteLayout>
+        {
+          Object.keys(data).map((elem, index) => {
+            if (data[elem].visible) {
+              return <Work
+                key={'work-' + index}
+                ref={this.state.workRefs[index]}
+                title={this.state.workTitles[index]}
+                images_folder={data[elem].images_folder}
+                images={data[elem].images}
+                vimeo={data[elem].vimeo}
+                setVisibleTitle={this.setVisibleTitle}
+              />
+            }
+            return null
+          })
+        }
+        {/* <div className={`workTit ${this.state.titleVisible ? 'play' : 'stop hide'} ${this.props.title.length > 10 ? 'longTitle' : ''}`}>
+            <Link to={'/works/' + this.props.title.toLowerCase()}>{this.props.title.toUpperCase()}</Link>
+          </div> */}
+        <div ref={this.workTitleRef} className={this.state.titleClasses}>
           {
-            Object.keys(data).map((elem, index) => {
-              if (data[elem].visible) {
-                return <Work
-                  key={'work-' + index}
-                  ref={this.state.workRefs[index]}
-                  title={this.state.workTitles[index]}
-                  images_folder={data[elem].images_folder}
-                  images={data[elem].images}
-                  vimeo={data[elem].vimeo}
-                />
-              }
-              return null
-            })
+            this.state.visibleTitle ? <Link to={'/works/' + this.state.visibleTitle.toLowerCase()}>{this.state.visibleTitle.toUpperCase()}</Link> : null
           }
+        </div>
+        <Footer></Footer>
       </SiteLayout>
     )
   }

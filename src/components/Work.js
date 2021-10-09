@@ -32,16 +32,21 @@ class Work extends Component {
 
         this.state = {
             titleVisible: false,
-            hidden: true,
+            // hidden: true,
         }
     }
 
     componentDidMount() {
         window.addEventListener('scroll', this.handleScroll)
-        this.setState({
-            titleVisible: this.getTitleVisibility(),
-            hidden: !this.getTitleVisibility()
-        })
+        const titleVisible = this.getTitleVisibility()
+        // this.setState({
+        //     titleVisible: titleVisible,
+        //     hidden: !titleVisible
+        // })
+        console.log(titleVisible)
+        if(titleVisible){
+            this.props.setVisibleTitle(this.props.title)
+        }
     }
 
     componentWillUnmount() {
@@ -50,24 +55,36 @@ class Work extends Component {
 
     handleScroll = () => {
         const titleVisible = this.getTitleVisibility()
+        
         this.setState(prevState => {
-            if (prevState.titleVisible !== titleVisible) {
-                if (prevState.titleVisible) {
-                    // console.log('showing')
-                    return {
-                        titleVisible: titleVisible,
-                        hidden: false
-                    }
-                } else {
-                    // console.log('hiding')
-                    return {
-                        titleVisible: titleVisible,
-                        hidden: !titleVisible
-                    }
+            if(prevState.titleVisible !== titleVisible) {
+                if(titleVisible) {
+                    this.props.setVisibleTitle(this.props.title)
+                }
+                return {
+                    titleVisible: titleVisible
                 }
             }
-            return null
         })
+        // this.setState(prevState => {
+        //     if (prevState.titleVisible !== titleVisible) {
+        //         if (prevState.titleVisible) {
+        //             // console.log('showing')
+        //             return {
+        //                 titleVisible: titleVisible,
+        //                 hidden: false
+        //             }
+        //         } else {
+        //             // console.log('hiding')
+        //             this.props.setVisibleTitle(this.props.title)
+        //             return {
+        //                 titleVisible: titleVisible,
+        //                 hidden: !titleVisible
+        //             }
+        //         }
+        //     }
+        //     return null
+        // })
 
     }
 
@@ -82,20 +99,11 @@ class Work extends Component {
     render() {
         return (
             <React.Fragment>
-                <div className={`workTit ${this.state.titleVisible ? 'play' : 'stop hide'} ${this.props.title.length > 10 ? 'longTitle' : ''}`}>
-                    <Link to={'/works/' + this.props.title.toLowerCase()}>{this.props.title.toUpperCase()}</Link>
-                </div>
                 <div ref={this.ref} className='blockWork'>
                     {
                         this.props.images.map((elem, index) => {
-                            // console.log(this.props)
                             return (
-                                
                                 <WorkImage key={index} index={index} folder={this.props.images_folder} name={elem} onClick={() => {window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase()}}/>
-                                // <Parallax key={'image-' + index} className={'imageRandom-' + index} y={[index, index]} tagOuter='figure'>
-                                //     <img src={process.env.PUBLIC_URL + '/images/' + elem} alt={'image-' + index} />
-                                // </Parallax>
-
                             )
                         })
                     }
