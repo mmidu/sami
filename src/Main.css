@@ -887,18 +887,20 @@ img {
     left: calc(50vw - 5em);
     text-align: center;
     width: 10em;
-    overflow: hidden;
+    /* overflow: hidden; */
     font: normal normal normal 20px/24px 'Barlow Condensed';
     letter-spacing: 0px;
 }
 
 .scrollLine {
     height: 4.5em;
-    width: 1px;
+    width: 2px;
     position: relative;
     left: 50%;
     top: 0;
-    background: linear-gradient(rgba(77, 77, 77, 0.5) 50%, #000 50%);
+    opacity: 0;
+    border-radius: 1em;
+    background: linear-gradient(rgba(200, 200, 200, 0.5) 0%, #000 100%);
 }
 
 .scrollLine.idle {
@@ -916,24 +918,30 @@ img {
 @keyframes scrollInLanding {
     0% {
         transform: scaleY(0);
+        opacity: 0;
     }
     75% {
         transform: scaleY(0);
+        opacity: 0;
     }
     100% {
         transform: scaleY(1);
+        opacity: 1;
     }
 }
 
 @keyframes scrollOutLanding {
     0% {
         transform: scaleY(1);
+        opacity: 1;
     }
     75% {
         transform: scaleY(0);
+        opacity: 0;
     }
     100% {
         transform: scaleY(0);
+        opacity: 0;
     }
 }
 
@@ -957,8 +965,9 @@ img {
 .scrollCTA.idle {
     animation: slideInLandingCTA 0.75s ease-out forwards;
     animation-delay: 0.5s;
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -webkit-transform: translateY(1em);
+    transform: translateY(1em);
+    opacity: 0;
 }
 
 .scrollCTA.scrolled {
@@ -968,23 +977,27 @@ img {
 
 @keyframes slideOutLandingCTA {
     0% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
     100% {
-        -webkit-transform: translateX(100%);
-        transform: translateX(100%);
+        -webkit-transform: translateY(1em);
+        transform: translateY(1em);
+        opacity: 0;
     }
 }
 
 @keyframes slideInLandingCTA {
     0% {
-        -webkit-transform: translateX(-100%);
-        transform: translateX(-100%);
+        -webkit-transform: translateY(1em);
+        transform: translateY(1em);
+        opacity: 0;
     }
     100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
 }
 

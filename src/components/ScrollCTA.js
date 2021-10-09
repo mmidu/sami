@@ -4,7 +4,7 @@ const ScrollCTA = (props) => {
     return (
         <div className={`scrollCTAContainer`}>
             <div className={`scrollLine ${!props.active ? 'scrolled' : 'idle'}`}></div>
-            <p className={`scrollCTA ${!props.active ? 'scrolled' : 'idle'}`}>SCROLL &amp; DISCOVER</p>
+            <p className={`scrollCTA ${!props.active ? 'scrolled' : 'idle'}`}>SCROLL UP &amp; DISCOVER</p>
         </div>
     )
 }
