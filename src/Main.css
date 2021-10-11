@@ -1018,7 +1018,7 @@ img {
     -webkit-animation: showUPTwo 1s;
 }
 
-.workImage.inViewport {
+.workImage.is-visible {
     opacity: 1;
     top: 0;
     transition: 0.675s ease-in;

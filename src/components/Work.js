@@ -1,14 +1,19 @@
-import React, { Component, useState } from 'react'
+import React, { Component } from 'react'
 import _ from "lodash"
+import LazyLoad from 'react-lazy-load'
+
 
 const WorkImage = (props) => {
-    
+
     return (
-        <div className={`workImage imageRandom-${props.index} ${props.index == 0 ? 'inViewport' : ''}`}
-            onClick={props.onClick}
-          >
+        // <div className={`workImage imageRandom-${props.index} ${props.index == 0 ? 'inViewport' : ''}`}
+        //     onClick={props.onClick}
+        //   >
+        <LazyLoad className={`workImage imageRandom-${props.index}`} offsetVertical={200}>
             <img src={process.env.PUBLIC_URL + '/images/' + props.folder + '/' + props.name} alt={'image-' + props.index} />
-        </div>
+
+        </LazyLoad>
+        // </div>
     )
 }
 
@@ -32,7 +37,7 @@ class Work extends Component {
         //     hidden: !titleVisible
         // })
         // console.log(titleVisible)
-        if(titleVisible){
+        if (titleVisible) {
             this.props.setVisibleTitle(this.props.title)
         }
     }
@@ -43,10 +48,10 @@ class Work extends Component {
 
     handleScroll = () => {
         const titleVisible = this.getTitleVisibility()
-        
+
         this.setState(prevState => {
-            if(prevState.titleVisible !== titleVisible) {
-                if(titleVisible) {
+            if (prevState.titleVisible !== titleVisible) {
+                if (titleVisible) {
                     this.props.setVisibleTitle(this.props.title)
                 }
                 return {
@@ -78,7 +83,7 @@ class Work extends Component {
 
     getTitleVisibility = () => {
         if (this.ref.current) {
-            
+
             let boundingRect = this.ref.current.getBoundingClientRect()
             return boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
         }
@@ -91,7 +96,7 @@ class Work extends Component {
                     {
                         this.props.images.map((elem, index) => {
                             return (
-                                <WorkImage key={index} index={index} folder={this.props.images_folder} name={elem} onClick={() => {window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase()}}/>
+                                <WorkImage key={index} index={index} folder={this.props.images_folder} name={elem} onClick={() => { window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase() }} />
                             )
                         })
                     }

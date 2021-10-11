@@ -4,7 +4,6 @@ import Footer from '../components/Footer'
 import SiteLayout from '../components/SiteLayout'
 import Work from '../components/Work'
 import data from '../works.json'
-import LocomotiveScroll from 'locomotive-scroll'
 
 class Works extends Component {
   constructor() {
@@ -36,7 +35,7 @@ class Works extends Component {
       document.getElementsByClassName('imageRandom-2'),
       document.getElementsByClassName('imageRandom-3')
     ]
-    this.updateImageVisibility()
+    // this.updateImageVisibility()
     window.addEventListener('scroll', this.handleScroll)
     // const scroll = new LocomotiveScroll({
     //   el: document.querySelector('[data-scroll-container]'),
@@ -54,13 +53,14 @@ class Works extends Component {
   }
 
   handleScroll = () => {
-    this.updateImageVisibility()
+    // this.updateImageVisibility()
   }
 
   setVisibleTitle = (title) => {
     // this.
     this.setState(prevState => {
       if (prevState.titleClasses !== 'workTit stop hide') {
+        
         return {
           titleClasses: 'workTit stop hide'
         }
@@ -69,7 +69,7 @@ class Works extends Component {
       setTimeout(() => {
         this.setState({
           visibleTitle: title,
-          titleClasses: 'workTit play'
+          titleClasses: 'workTit play' + (title.length > 10 ? ' longTitle' : '')
         })
       }, 500)
     })

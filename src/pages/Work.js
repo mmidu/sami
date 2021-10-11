@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import SiteLayout from '../components/SiteLayout'
 import VideoModal from '../components/VideoModal'
 import data from '../works.json'
-import LocomotiveScroll from 'locomotive-scroll'
+
 
 const Work = (props) => {
     const galleryRef = useRef()
