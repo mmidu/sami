@@ -1127,6 +1127,9 @@ img {
     -webkit-text-stroke: 2px #848e92 !important;
     -webkit-text-fill-color: unset !important;
 }
+    .footer svg {
+        display: none;
+    }
 /* .scrollLineUpper,
 .scrollLineLower {
     border-left: 1px solid;
@@ -1441,6 +1444,10 @@ img {
     .exit {
         left: 40%;
         bottom: 15%;
+    }
+    .footer svg {
+        display: block;
+        margin: 2em 0;
     }
     @-webkit-keyframes enterscreen {
         0% {
