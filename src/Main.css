@@ -499,7 +499,7 @@ a.nostyle:visited {
     font-size: 8em;
     color: transparent;
     -webkit-text-stroke-width: 0.02em;
-    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-color: #000;
     margin: auto;
 }
 
@@ -1447,7 +1447,8 @@ img {
     }
     .footer svg {
         display: block;
-        margin: 2em 0;
+        margin: 2em auto;
+        width: 65px;
     }
     @-webkit-keyframes enterscreen {
         0% {
