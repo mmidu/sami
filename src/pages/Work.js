@@ -1,9 +1,10 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import SiteLayout from '../components/SiteLayout'
 import VideoModal from '../components/VideoModal'
 import data from '../works.json'
+import LocomotiveScroll from 'locomotive-scroll'
 
 const Work = (props) => {
     const galleryRef = useRef()
@@ -18,6 +19,14 @@ const Work = (props) => {
         galleryRef.current.scrollLeft -= (delta * 20)
         // e.preventDefault()
     }
+
+    // useEffect(() => {
+    //     const scroll = new LocomotiveScroll({
+    //         el: document.querySelector('[data-scroll-container]'),
+    //         smooth: true,
+    //         direction: 'horizontal',
+    //       })
+    // }, [])
 
     const toggleVideoModal = () => {
         setIsVideoModalOn(!isVideoModalOn)
@@ -65,11 +74,11 @@ const Work = (props) => {
                     `}
                     </style>
                 </Helmet>}
-                <div className='work-container'>
+                <div data-scroll-container className='work-container'>
                     <div ref={galleryRef} className='work-container-gallery' onWheel={scrollHorizontally}>
                         {   
                             images.map((elem, index) => {
-                                return <img
+                                return <img data-scroll-section
                                     key={'image-' + index}
                                     src={process.env.PUBLIC_URL + '/images/' + work.images_folder + '/' + elem}
                                     alt={'image-' + index}

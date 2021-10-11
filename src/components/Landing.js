@@ -84,7 +84,7 @@ class Landing extends Component {
                     this.context.clearRect(0, 0, 1920, 1080)
                     this.context.drawImage(this.img, 0, 0)
                 } catch {
-                    console.log('canvas deleted')
+                    // console.log('canvas deleted')
                 }
             }
         }

@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import SiteLayout from '../components/SiteLayout'
 import Work from '../components/Work'
 import data from '../works.json'
+import LocomotiveScroll from 'locomotive-scroll'
 
 class Works extends Component {
   constructor() {
@@ -37,6 +38,10 @@ class Works extends Component {
     ]
     this.updateImageVisibility()
     window.addEventListener('scroll', this.handleScroll)
+    // const scroll = new LocomotiveScroll({
+    //   el: document.querySelector('[data-scroll-container]'),
+    //   smooth: true,
+    // })
   }
 
   componentWillUnmount = () => {
@@ -45,7 +50,7 @@ class Works extends Component {
   }
 
   getIsInViewport = (boundingRect) => {
-    return boundingRect.top < window.innerHeight && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
+    return boundingRect.top < window.innerHeight && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight
   }
 
   handleScroll = () => {
@@ -73,12 +78,15 @@ class Works extends Component {
   updateImageVisibility = () => {
     for (let i = 0; i < this.workImages.length; i++) {
       for (let workImage of this.workImages[i]) {
-        const boundingRect = workImage.getBoundingClientRect()
-        const isInViewport = this.getIsInViewport(boundingRect)
+        // if (!workImage.classList.contains('inViewport')) {
+          const boundingRect = workImage.getBoundingClientRect()
+          const isInViewport = this.getIsInViewport(boundingRect)
 
-        if (isInViewport) {
-          workImage.classList.add('inViewport')
-        }
+          if (isInViewport) {
+            workImage.classList.add('inViewport')
+          }
+        // }
+
       }
     }
   }
@@ -91,28 +99,25 @@ class Works extends Component {
             this.state.visibleTitle ? <Link to={'/works/' + this.state.visibleTitle.toLowerCase()}>{this.state.visibleTitle.toUpperCase()}</Link> : null
           }
         </div>
-        {/* <ScrollContainer> */}
-          {
-            Object.keys(data).map((elem, index) => {
-              if (data[elem].visible) {
-                return <Work
-                  key={'work-' + index}
-                  ref={this.state.workRefs[index]}
-                  title={this.state.workTitles[index]}
-                  images_folder={data[elem].images_folder}
-                  images={data[elem].images}
-                  vimeo={data[elem].vimeo}
-                  setVisibleTitle={this.setVisibleTitle}
-                />
-              }
-              return null
-            })
-          }
-        {/* </ScrollContainer> */}
-        {/* <div className={`workTit ${this.state.titleVisible ? 'play' : 'stop hide'} ${this.props.title.length > 10 ? 'longTitle' : ''}`}>
-            <Link to={'/works/' + this.props.title.toLowerCase()}>{this.props.title.toUpperCase()}</Link>
-          </div> */}
-
+        {/* <div data-scroll-container> */}
+        {
+          Object.keys(data).map((elem, index) => {
+            if (data[elem].visible) {
+              return <Work
+                key={'work-' + index}
+                ref={this.state.workRefs[index]}
+                title={this.state.workTitles[index]}
+                images_folder={data[elem].images_folder}
+                images={data[elem].images}
+                vimeo={data[elem].vimeo}
+                setVisibleTitle={this.setVisibleTitle}
+                index={index}
+              />
+            }
+            return null
+          })
+        }
+        {/* </div> */}
         <Footer></Footer>
       </SiteLayout>
     )

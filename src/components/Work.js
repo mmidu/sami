@@ -2,20 +2,9 @@ import React, { Component, useState } from 'react'
 import _ from "lodash"
 
 const WorkImage = (props) => {
-
-    const [isInViewport, setIsInViewport] = useState(false)
-
-    const getIsInViewport = (boundingRect) => {
-        return boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
-    }
     
     return (
-        <div ref={el => {
-            if (!el) return
-            const boundingRect = el.getBoundingClientRect()
-            setIsInViewport(getIsInViewport(boundingRect))
-
-          }} className={`workImage imageRandom-${props.index} ${isInViewport ? ' inViewport' : ''}`}
+        <div className={`workImage imageRandom-${props.index} ${props.index == 0 ? 'inViewport' : ''}`}
             onClick={props.onClick}
           >
             <img src={process.env.PUBLIC_URL + '/images/' + props.folder + '/' + props.name} alt={'image-' + props.index} />
@@ -42,7 +31,7 @@ class Work extends Component {
         //     titleVisible: titleVisible,
         //     hidden: !titleVisible
         // })
-        console.log(titleVisible)
+        // console.log(titleVisible)
         if(titleVisible){
             this.props.setVisibleTitle(this.props.title)
         }

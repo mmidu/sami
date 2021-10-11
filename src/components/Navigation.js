@@ -13,7 +13,7 @@ const Navigation = () => {
 
     useEffect(() => {
         setClassName('shown')
-        return () => console.log('unmount')
+        // return () => console.log('unmount')
     }, [])
 
     return (
