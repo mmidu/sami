@@ -894,9 +894,9 @@ img {
     bottom: 3em;
     left: calc(50vw - 5em);
     text-align: center;
-    width: 10em;
+    width: 12em;
     /* overflow: hidden; */
-    font: normal normal normal 20px/24px 'Barlow Condensed';
+    font: normal normal normal 14px/20px "Samsung Sharp Sans Bold";
     letter-spacing: 0px;
 }
 
