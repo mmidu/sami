@@ -49,7 +49,7 @@ class Works extends Component {
       document.getElementsByClassName('imageRandom-3')
     ]
     this.setImagesVisibility()
-    this.updateTitle()
+    this.setVisibleTitle(this.state.workTitles[0])
     window.addEventListener('scroll', this.handleScroll)
   }
 
@@ -87,12 +87,15 @@ class Works extends Component {
 
   setVisibleTitle = (title) => {
     this.setState(prevState => {
-      if (prevState.titleClasses !== 'workTit stop hide') {
+      if (prevState.visibleTitle !== title) {
+        if (prevState.titleClasses !== 'workTit stop hide') {
 
-        return {
-          titleClasses: 'workTit stop hide'
+          return {
+            titleClasses: 'workTit stop hide'
+          }
         }
       }
+
     }, () => {
       setTimeout(() => {
         this.setState({
