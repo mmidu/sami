@@ -56,7 +56,7 @@ body {
     background-position: center top;
     background-size: cover;
     margin: auto;
-    background: transparent linear-gradient(129deg, rgba(244, 252, 255, 0.49) 0%, rgba(224, 247, 255, 0.49) 100%) 0% 0% no-repeat padding-box;
+    /* background: transparent linear-gradient(129deg, rgba(244, 252, 255, 0.49) 0%, rgba(224, 247, 255, 0.49) 100%) 0% 0% no-repeat padding-box; */
 }
 
 body:before {
@@ -860,7 +860,7 @@ img {
     width: 100vw;
     height: 100vh;
     position: fixed;
-    background: transparent linear-gradient(129deg, rgba(244, 252, 255, 0.49) 0%, rgba(224, 247, 255, 0.49) 100%) 0% 0% no-repeat padding-box;
+    /* background: transparent linear-gradient(129deg, rgba(244, 252, 255, 0.49) 0%, rgba(224, 247, 255, 0.49) 100%) 0% 0% no-repeat padding-box; */
     content: '';
     opacity: 0;
 }
