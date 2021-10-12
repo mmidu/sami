@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 import SiteLayout from '../components/SiteLayout'
@@ -19,7 +20,7 @@ class Works extends Component {
       imageRefs: Object.keys(data).map(title => {
         if (data[title].visible) {
           let workImagesRefs = []
-          for(const image in data[title].images){
+          for (const image in data[title].images) {
             workImagesRefs.push(React.createRef())
           }
           return workImagesRefs
@@ -69,7 +70,7 @@ class Works extends Component {
   setImagesVisibility = () => {
     this.state.imageRefs.forEach(workImages => {
       workImages.forEach(image => {
-        if(image.current.getIsInViewport()){
+        if (image.current.getIsInViewport()) {
           image.current.setVisible()
         }
       })
@@ -78,7 +79,7 @@ class Works extends Component {
 
   updateTitle = () => {
     this.state.workRefs.forEach(workRef => {
-      if(workRef.current.getTitleVisibility()){
+      if (workRef.current.getTitleVisibility()) {
         this.setVisibleTitle(workRef.current.getTitle())
       }
     })
@@ -87,7 +88,7 @@ class Works extends Component {
   setVisibleTitle = (title) => {
     this.setState(prevState => {
       if (prevState.titleClasses !== 'workTit stop hide') {
-        
+
         return {
           titleClasses: 'workTit stop hide'
         }
@@ -105,6 +106,46 @@ class Works extends Component {
   render() {
     return (
       <SiteLayout>
+        <Helmet>
+          {
+            <style>
+              {`
+                        body{
+                            /*GRADIENT*/
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #F4FCFF 0%, #d9cafca1) repeat scroll 0 0;
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #F4FCFF 0%, #d9cafca1) repeat scroll 0 0;
+                            background: rgba(0, 0, 0, 0) linear-gradient(0deg, #F4FCFF 0%, #d9cafca1) repeat scroll 0 0;
+                            background: linear-gradient(0deg, #F4FCFF, #D9CAFC);
+                            background-size: auto;
+                            background-size: 600% 600%;
+                            -webkit-animation: horizon 8s ease infinite;
+                            -moz-animation: horizon 8s ease infinite;
+                            animation: horizon 8s ease infinite;
+                        }
+                        @-webkit-keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
+                        }
+                        @-moz-keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
+                        }
+                        @-o-keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
+                        }
+                        @keyframes horizon {
+                            0%{background-position:59% 0%}
+                            50%{background-position:42% 100%}
+                            100%{background-position:59% 0%}
+                        }
+                    `}
+            </style>
+          }
+        </Helmet>
         <div ref={this.workTitleRef} className={this.state.titleClasses}>
           {
             this.state.visibleTitle ? <Link to={'/works/' + this.state.visibleTitle.toLowerCase()}>{this.state.visibleTitle.toUpperCase()}</Link> : null

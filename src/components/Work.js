@@ -1,8 +1,4 @@
-import React, { Component, forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
-import _ from "lodash"
-import LazyLoad from 'react-lazy-load'
-import { render } from '@testing-library/react'
-
+import React, { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 
 const WorkImage = forwardRef((props, ref) => {
     const [visible, setVisible] = useState(false)
