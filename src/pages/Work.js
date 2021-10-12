@@ -94,7 +94,7 @@ const Work = (props) => {
 
                             <span>Back</span>
                         </Link>
-                        <div className='work-title'>{props.match.params.name.toUpperCase()}</div>
+                        <div className={`work-title ${props.match.params.name.length > 9 ? 'longTitle' : ''}`}>{props.match.params.name.toUpperCase()}</div>
                     </div>
 
                     <div className='work-container-footer'>

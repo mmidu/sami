@@ -97,7 +97,7 @@ class Works extends Component {
       setTimeout(() => {
         this.setState({
           visibleTitle: title,
-          titleClasses: 'workTit play' + (title.length > 10 ? ' longTitle' : '')
+          titleClasses: 'workTit play' + (title.length > 9 ? ' longTitle' : '')
         })
       }, 500)
     })
