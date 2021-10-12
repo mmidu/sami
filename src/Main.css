@@ -1490,3 +1490,11 @@ img {
         }
     }
 }
+
+
+@media only screen and (max-width: 98.1496em) {
+    .work-title.longTitle{
+        font-size: 6rem;
+        top: 25%;
+    }
+}
