@@ -14,9 +14,10 @@ import { Helmet } from 'react-helmet'
 
 class Main extends Component {
     render() {
+        const updatePadding = !!window.chrome || /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
         return (
             <BrowserRouter basename={'/cs/sami/'}>
-                {!!window.chrome ? <Helmet><style>{`
+                {updatePadding ? <Helmet><style>{`
                     .footer svg {
                         display: block;
                         margin: 0 auto;

@@ -88,10 +88,10 @@ class Works extends Component {
   setVisibleTitle = (title) => {
     this.setState(prevState => {
       if (prevState.visibleTitle !== title) {
-        if (prevState.titleClasses !== 'workTit stop hide') {
+        if (prevState.titleClasses.includes('workTit stop hide')) {
 
           return {
-            titleClasses: 'workTit stop hide'
+            titleClasses: 'workTit stop hide' + (title.length > 9 ? ' longTitle' : '')
           }
         }
       }
@@ -115,10 +115,10 @@ class Works extends Component {
               {`
                         body{
                             /*GRADIENT*/
-                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #F4FCFF 0%, #d9cafca1) repeat scroll 0 0;
-                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #F4FCFF 0%, #d9cafca1) repeat scroll 0 0;
-                            background: rgba(0, 0, 0, 0) linear-gradient(0deg, #F4FCFF 0%, #d9cafca1) repeat scroll 0 0;
-                            background: linear-gradient(0deg, #F4FCFF, #D9CAFC);
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #f4fcff 0%, #ccf1ff) repeat scroll 0 0;
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #f4fcff 0%, #ccf1ff) repeat scroll 0 0;
+                            background: rgba(0, 0, 0, 0) linear-gradient(0deg, #f4fcff 0%, #ccf1ff) repeat scroll 0 0;
+                            background: linear-gradient(0deg, #f4fcff, #ccf1ff);
                             background-size: auto;
                             background-attachment: fixed;
                             background-size: 600% 600%;
