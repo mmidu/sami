@@ -117,6 +117,7 @@ class Works extends Component {
                             background: rgba(0, 0, 0, 0) linear-gradient(0deg, #F4FCFF 0%, #d9cafca1) repeat scroll 0 0;
                             background: linear-gradient(0deg, #F4FCFF, #D9CAFC);
                             background-size: auto;
+                            background-attachment: fixed;
                             background-size: 600% 600%;
                             -webkit-animation: horizon 8s ease infinite;
                             -moz-animation: horizon 8s ease infinite;
