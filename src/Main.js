@@ -10,11 +10,22 @@ import Contacts from './pages/Contacts'
 import Works from './pages/Works'
 import Work from './pages/Work'
 import './Main.css'
+import { Helmet } from 'react-helmet'
 
 class Main extends Component {
     render() {
         return (
             <BrowserRouter basename={'/cs/sami/'}>
+                {!!window.chrome ? <Helmet><style>{`
+                    .footer svg {
+                        display: block;
+                        margin: 0 auto;
+                        width: 65px;
+                    }
+                    .footer {
+                        padding-bottom: 6em;
+                    }
+                `}</style></Helmet>:''}
                 <Switch>
                     <Route path={['/about', '/works', '/contacts']}>
                             <Switch>
