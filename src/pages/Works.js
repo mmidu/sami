@@ -50,7 +50,6 @@ class Works extends Component {
     this.setImagesVisibility()
     this.updateTitle()
     window.addEventListener('scroll', this.handleScroll)
-
   }
 
   componentWillUnmount = () => {
