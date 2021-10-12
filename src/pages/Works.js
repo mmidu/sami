@@ -88,7 +88,7 @@ class Works extends Component {
   setVisibleTitle = (title) => {
     this.setState(prevState => {
       if (prevState.visibleTitle !== title) {
-        if (prevState.titleClasses.includes('workTit stop hide')) {
+        if (!prevState.titleClasses.includes('workTit stop hide')) {
 
           return {
             titleClasses: 'workTit stop hide' + (title.length > 9 ? ' longTitle' : '')
