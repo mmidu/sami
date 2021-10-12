@@ -8,10 +8,21 @@ import data from '../works.json'
 class Works extends Component {
   constructor() {
     super()
+
     this.state = {
-      workRefs: Object.keys(data).map(() => {
-        if (data.visible) {
+      workRefs: Object.keys(data).map(title => {
+        if (data[title].visible) {
           return React.createRef()
+        }
+        return null
+      }),
+      imageRefs: Object.keys(data).map(title => {
+        if (data[title].visible) {
+          let workImagesRefs = []
+          for(const image in data[title].images){
+            workImagesRefs.push(React.createRef())
+          }
+          return workImagesRefs
         }
         return null
       }),
@@ -25,6 +36,7 @@ class Works extends Component {
       visibleTitle: null,
       titleClasses: 'workTit play'
     }
+
     this.setVisibleTitle = this.setVisibleTitle.bind(this)
   }
 
@@ -35,12 +47,10 @@ class Works extends Component {
       document.getElementsByClassName('imageRandom-2'),
       document.getElementsByClassName('imageRandom-3')
     ]
-    // this.updateImageVisibility()
+    this.setImagesVisibility()
+    this.updateTitle()
     window.addEventListener('scroll', this.handleScroll)
-    // const scroll = new LocomotiveScroll({
-    //   el: document.querySelector('[data-scroll-container]'),
-    //   smooth: true,
-    // })
+
   }
 
   componentWillUnmount = () => {
@@ -53,11 +63,29 @@ class Works extends Component {
   }
 
   handleScroll = () => {
-    // this.updateImageVisibility()
+    this.setImagesVisibility()
+    this.updateTitle()
+  }
+
+  setImagesVisibility = () => {
+    this.state.imageRefs.forEach(workImages => {
+      workImages.forEach(image => {
+        if(image.current.getIsInViewport()){
+          image.current.setVisible()
+        }
+      })
+    })
+  }
+
+  updateTitle = () => {
+    this.state.workRefs.forEach(workRef => {
+      if(workRef.current.getTitleVisibility()){
+        this.setVisibleTitle(workRef.current.getTitle())
+      }
+    })
   }
 
   setVisibleTitle = (title) => {
-    // this.
     this.setState(prevState => {
       if (prevState.titleClasses !== 'workTit stop hide') {
         
@@ -75,22 +103,6 @@ class Works extends Component {
     })
   }
 
-  updateImageVisibility = () => {
-    for (let i = 0; i < this.workImages.length; i++) {
-      for (let workImage of this.workImages[i]) {
-        // if (!workImage.classList.contains('inViewport')) {
-          const boundingRect = workImage.getBoundingClientRect()
-          const isInViewport = this.getIsInViewport(boundingRect)
-
-          if (isInViewport) {
-            workImage.classList.add('inViewport')
-          }
-        // }
-
-      }
-    }
-  }
-
   render() {
     return (
       <SiteLayout>
@@ -99,25 +111,23 @@ class Works extends Component {
             this.state.visibleTitle ? <Link to={'/works/' + this.state.visibleTitle.toLowerCase()}>{this.state.visibleTitle.toUpperCase()}</Link> : null
           }
         </div>
-        {/* <div data-scroll-container> */}
         {
           Object.keys(data).map((elem, index) => {
             if (data[elem].visible) {
               return <Work
                 key={'work-' + index}
                 ref={this.state.workRefs[index]}
+                workImagesRefs={this.state.imageRefs[index]}
                 title={this.state.workTitles[index]}
                 images_folder={data[elem].images_folder}
                 images={data[elem].images}
                 vimeo={data[elem].vimeo}
-                setVisibleTitle={this.setVisibleTitle}
                 index={index}
               />
             }
             return null
           })
         }
-        {/* </div> */}
         <Footer></Footer>
       </SiteLayout>
     )

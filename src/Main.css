@@ -1012,13 +1012,11 @@ img {
 .workImage {
     position: relative;
     opacity: 0;
-    /* transition: opacity 0.675s ease-out; */
-    animation: showUPOne 1s ease-out forwards;
+    animation: showUPOne 1s ease-out;
     top: 1em;
-    -webkit-animation: showUPTwo 1s;
 }
 
-.workImage.is-visible {
+.workImage.inViewport {
     opacity: 1;
     top: 0;
     transition: 0.675s ease-in;
@@ -1036,8 +1034,8 @@ img {
 }
 
 .imageRandom-0 {
-    animation: showRandom-0 2s ease-out forwards;
-    -webkit-animation: showRandom-0 2s;
+    /* animation: showRandom-0 2s ease-out forwards; */
+    /* -webkit-animation: showRandom-0 2s; */
 }
 
 @keyframes showRandom-0 {
@@ -1052,8 +1050,8 @@ img {
 }
 
 .imageRandom-1 {
-    animation: showRandom-1 2s ease-out forwards;
-    -webkit-animation: showRandom-0 2s;
+    /* animation: showRandom-1 2s ease-out forwards; */
+    /* -webkit-animation: showRandom-0 2s; */
 }
 
 @keyframes showRandom-1 {
@@ -1068,8 +1066,8 @@ img {
 }
 
 .imageRandom-2 {
-    animation: showRandom-2 2s ease-out forwards;
-    -webkit-animation: showRandom-2 2s;
+    /* animation: showRandom-2 2s ease-out forwards; */
+    /* -webkit-animation: showRandom-2 2s; */
 }
 
 @keyframes showRandom-2 {

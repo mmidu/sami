@@ -1,111 +1,63 @@
-import React, { Component } from 'react'
+import React, { Component, forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react'
 import _ from "lodash"
 import LazyLoad from 'react-lazy-load'
+import { render } from '@testing-library/react'
 
 
-const WorkImage = (props) => {
+const WorkImage = forwardRef((props, ref) => {
+    const [visible, setVisible] = useState(false)
+
+    const workImageRef = useRef()
+    useImperativeHandle(ref, () => ({
+        getIsInViewport: () => {
+            let boundingRect = workImageRef.current.getBoundingClientRect()
+            return boundingRect.top < window.innerHeight
+        },
+        setVisible: () => {
+            setVisible(true)
+        }
+    }))
 
     return (
-        // <div className={`workImage imageRandom-${props.index} ${props.index == 0 ? 'inViewport' : ''}`}
-        //     onClick={props.onClick}
-        //   >
-        <LazyLoad className={`workImage imageRandom-${props.index}`} offsetVertical={200}>
+        <div ref={workImageRef} className={`workImage imageRandom-${props.index} ${visible ? 'inViewport':  ''}`}
+            onClick={props.onClick}
+        >
             <img src={process.env.PUBLIC_URL + '/images/' + props.folder + '/' + props.name} alt={'image-' + props.index} />
 
-        </LazyLoad>
-        // </div>
+        </div>
     )
-}
+})
 
-class Work extends Component {
-    ref = React.createRef()
-
-    constructor() {
-        super()
-
-        this.state = {
-            titleVisible: false,
-            // hidden: true,
-        }
-    }
-
-    componentDidMount() {
-        window.addEventListener('scroll', _.debounce(this.handleScroll, 50))
-        const titleVisible = this.getTitleVisibility()
-        // this.setState({
-        //     titleVisible: titleVisible,
-        //     hidden: !titleVisible
-        // })
-        // console.log(titleVisible)
-        if (titleVisible) {
-            this.props.setVisibleTitle(this.props.title)
-        }
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('scroll', this.handleScroll)
-    }
-
-    handleScroll = () => {
-        const titleVisible = this.getTitleVisibility()
-
-        this.setState(prevState => {
-            if (prevState.titleVisible !== titleVisible) {
-                if (titleVisible) {
-                    this.props.setVisibleTitle(this.props.title)
-                }
-                return {
-                    titleVisible: titleVisible
-                }
+const Work = forwardRef((props, ref) => {
+    const blockWorkRef = useRef()
+    const [titleVisible, setTitleVisible] = useState(false)
+    useImperativeHandle(ref, () => ({
+        getTitleVisibility: () => {
+            let boundingRect = blockWorkRef.current.getBoundingClientRect()
+            let newVisibility = boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
+            if (titleVisible !== newVisibility) {
+                setTitleVisible(newVisibility)
+                return newVisibility
             }
-        })
-        // this.setState(prevState => {
-        //     if (prevState.titleVisible !== titleVisible) {
-        //         if (prevState.titleVisible) {
-        //             // console.log('showing')
-        //             return {
-        //                 titleVisible: titleVisible,
-        //                 hidden: false
-        //             }
-        //         } else {
-        //             // console.log('hiding')
-        //             this.props.setVisibleTitle(this.props.title)
-        //             return {
-        //                 titleVisible: titleVisible,
-        //                 hidden: !titleVisible
-        //             }
-        //         }
-        //     }
-        //     return null
-        // })
-
-    }
-
-    getTitleVisibility = () => {
-        if (this.ref.current) {
-
-            let boundingRect = this.ref.current.getBoundingClientRect()
-            return boundingRect.top < window.innerHeight / 2 && boundingRect.bottom > 0 && boundingRect.bottom >= window.innerHeight / 2
+        },
+        getTitle: () => {
+            return props.title
         }
-    }
+    }))
 
-    render() {
-        return (
-            <React.Fragment>
-                <div ref={this.ref} className='blockWork'>
-                    {
-                        this.props.images.map((elem, index) => {
-                            return (
-                                <WorkImage key={index} index={index} folder={this.props.images_folder} name={elem} onClick={() => { window.location.href = process.env.PUBLIC_URL + '/works/' + this.props.title.toLowerCase() }} />
-                            )
-                        })
-                    }
-                </div>
-            </React.Fragment>
-
-        )
-    }
-
-}
+    return (
+    <React.Fragment>
+        <div ref={blockWorkRef} className={`blockWork`}>
+            {
+                props.images.map((elem, index) => {
+                    return (
+                        <WorkImage workIndex={props.index} ref={props.workImagesRefs[index]} key={index} index={index} folder={props.images_folder} name={elem} onClick={() => { window.location.href = process.env.PUBLIC_URL + '/works/' + props.title.toLowerCase() }} />
+                    )
+                })
+            }
+        </div>
+    </React.Fragment>
+    )
+})
 
 export default Work
