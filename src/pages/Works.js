@@ -35,7 +35,7 @@ class Works extends Component {
         return null
       }),
       visibleTitle: null,
-      titleClasses: 'workTit play'
+      titleClasses: ['workTit', 'play']
     }
 
     this.setVisibleTitle = this.setVisibleTitle.bind(this)
@@ -88,19 +88,25 @@ class Works extends Component {
   setVisibleTitle = (title) => {
     this.setState(prevState => {
       if (prevState.visibleTitle !== title) {
-        if (!prevState.titleClasses.includes('workTit stop hide')) {
-
+        if (!prevState.titleClasses.includes('stop', 'hide')) {
+          let titleClasses = prevState.titleClasses.filter(titleClass => titleClass !== 'play')
+          titleClasses.push('stop', 'hide')
           return {
-            titleClasses: 'workTit stop hide' + (title.length > 9 ? ' longTitle' : '')
+            titleClasses: titleClasses
           }
         }
       }
 
-    }, () => {
+    }, elem => {
+      console.log(elem)
       setTimeout(() => {
+        let titleClasses = ['workTit', 'play']
+        if(title.length > 9){
+          titleClasses.push('longTitle')
+        }
         this.setState({
           visibleTitle: title,
-          titleClasses: 'workTit play' + (title.length > 9 ? ' longTitle' : '')
+          titleClasses: titleClasses
         })
       }, 500)
     })
@@ -150,7 +156,7 @@ class Works extends Component {
             </style>
           }
         </Helmet>
-        <div ref={this.workTitleRef} className={this.state.titleClasses}>
+        <div ref={this.workTitleRef} className={this.state.titleClasses.join(' ')}>
           {
             this.state.visibleTitle ? <Link to={'/works/' + this.state.visibleTitle.toLowerCase()}>{this.state.visibleTitle.toUpperCase()}</Link> : null
           }
