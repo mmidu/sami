@@ -56,6 +56,7 @@ body {
     background-position: center top;
     background-size: cover;
     margin: auto;
+    min-height: 100vh;
     background: transparent linear-gradient(129deg, rgba(244, 252, 255, 0.49) 0%, rgba(224, 247, 255, 0.49) 100%) 0% 0% no-repeat padding-box;
 }
 
@@ -1240,7 +1241,8 @@ img {
         margin: 7em auto;
     }
     .work-container-gallery {
-        top: 11em;
+        top: 9em;
+        height: calc(100% - 11em);
     }
     .nostyle.work-back-button {
         display: none;
@@ -1435,7 +1437,7 @@ img {
     .txtContacts {
         font-size: 1.9em;
         color: #c4c4c4;
-        margin-bottom: 1.5em;
+        margin-bottom: 3em;
     }
     .txtContacts span {
         -webkit-text-stroke: 0.02em #848e92;
@@ -1445,6 +1447,7 @@ img {
     }
     .work-title{
         font-size: 3.5em;
+        margin: 1em auto auto;
     }
     
     .work-title.longTitle{

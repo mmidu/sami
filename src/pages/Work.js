@@ -40,11 +40,10 @@ const Work = (props) => {
                         {`
                         body{
                             /*GRADIENT*/
-                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat scroll 0 0;
-                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat scroll 0 0;
-                            background: rgba(0, 0, 0, 0) linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat scroll 0 0;
-                            background: linear-gradient(0deg, #fffcf1, #D9CAFC);
-                                background-size: auto;
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat fixed 0 0;
+                            background: rgba(0, 0, 0, 0) -webkit-linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat fixed 0 0;
+                            background: rgba(0, 0, 0, 0) linear-gradient(0deg, #fffcf1 0%, #d9cafca1) repeat fixed 0 0;
+                            background: linear-gradient(0deg, #fffcf1, #D9CAFC) repeat fixed 0 0;
                             overflow: hidden;
                             background-size: 600% 600%;
                             -webkit-animation: horizon 8s ease infinite;

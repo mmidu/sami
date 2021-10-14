@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Footer from '../components/Footer'
 import TextLayout from '../components/TextLayout'
 
 class Contacts extends Component {
