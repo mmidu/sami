@@ -19,22 +19,25 @@
         ],
         "vimeo": "https://vimeo.com/623593122"
     },
-    "nike": {
+    "zma": {
         "visible": true,
-        "images_folder": "nike",
+        "images_folder": "zma",
         "images": [
-            "vlcsnap-2021-09-24-16h26m18s056.jpg",
-            "vlcsnap-2021-09-24-16h26m38s783.jpg",
-            "vlcsnap-2021-09-24-16h27m39s923.jpg",
-            "vlcsnap-2021-09-24-16h27m37s117.jpg"
+            "zmaOne.jpg",
+            "zmaTwo.jpg",
+            "zmaThree.jpg",
+            "zmaFour.jpg"
         ],
         "images_detail": [
-            "vlcsnap-2021-09-24-16h26m18s056.jpg",
-            "vlcsnap-2021-09-24-16h26m38s783.jpg",
-            "vlcsnap-2021-09-24-16h27m39s923.jpg",
-            "vlcsnap-2021-09-24-16h27m37s117.jpg",
-            "vlcsnap-2021-09-24-16h28m05s625.jpg",
-            "vlcsnap-2021-09-24-16h28m09s207.jpg"
+            "zmaOne.jpg",
+            "zmaTwo.jpg",
+            "zmaThree.jpg",
+            "zmaFour.jpg",
+            "5-zma.jpg",
+            "6-zma.jpg",
+            "DSCF6475.jpg",
+            "DSCF6479.jpg",
+            "DSCF6485.jpg"
         ],
         "vimeo": null
     },
@@ -58,22 +61,23 @@
         ],
         "vimeo": null
     },
-    "zma": {
+    "rv+acg": {
         "visible": true,
-        "images_folder": "zma",
+        "images_folder": "rv+acg",
         "images": [
-            "zmaOne.jpg",
-            "zmaTwo.jpg",
-            "zmaThree.jpg",
-            "zmaFour.jpg"
+            "vlcsnap-2021-09-24-16h26m18s056.jpg",
+            "vlcsnap-2021-09-24-16h26m38s783.jpg",
+            "vlcsnap-2021-09-24-16h27m39s923.jpg",
+            "vlcsnap-2021-09-24-16h27m37s117.jpg"
         ],
         "images_detail": [
-            "zmaOne.jpg",
-            "zmaTwo.jpg",
-            "zmaThree.jpg",
-            "zmaFour.jpg",
-            "5-zma.jpg",
-            "6-zma.jpg"
+            "vlcsnap-2021-09-24-16h26m18s056.jpg",
+            "vlcsnap-2021-09-24-16h26m38s783.jpg",
+            "vlcsnap-2021-09-24-16h27m39s923.jpg",
+            "vlcsnap-2021-09-24-16h27m37s117.jpg",
+            "vlcsnap-2021-10-15-12h39m17s938.jpg",
+            "vlcsnap-2021-10-15-12h39m23s616.jpg",
+            "vlcsnap-2021-10-15-12h39m36s633.jpg"
         ],
         "vimeo": null
     },
@@ -156,7 +160,6 @@
             "17A_00478.jpg",
             "_1A_00462-3.jpg",
             "_2A_00463.jpg"
-        ],
-        "vimeo": null
+        ]
     }
 }
