@@ -3,19 +3,19 @@
         "visible": true,
         "images_folder": "nope",
         "images": [
-            "AA029.jpg",
-            "img20210526_0122.jpg",
-            "img20210526_0124.jpg",
-            "AA023.jpg"
+            "nope-2.jpg",
+            "nope-3.jpg",
+            "nope-4.jpg",
+            "nope-1.jpg"
         ],
         "images_detail": [
-            "AA029.jpg",
-            "img20210526_0122.jpg",
-            "img20210526_0124.jpg",
-            "AA023.jpg",
-            "img20210526_0128.jpg",
-            "img20210526_0132.jpg",
-            "locandina-nope2.jpg"
+            "nope-2.jpg",
+            "nope-3.jpg",
+            "nope-4.jpg",
+            "nope-1.jpg",
+            "nope-5.jpg",
+            "nope-6.jpg",
+            "nope-7.jpg"
         ],
         "vimeo": "https://vimeo.com/623593122"
     },
@@ -23,21 +23,21 @@
         "visible": true,
         "images_folder": "zma",
         "images": [
-            "zmaOne.jpg",
-            "zmaTwo.jpg",
-            "DSCF6475.jpg",
-            "zmaFour.jpg"
+            "zma-7.jpg",
+            "zma-9.jpg",
+            "zma-3.jpg",
+            "zma-6.jpg"
         ],
         "images_detail": [
-            "zmaOne.jpg",
-            "zmaTwo.jpg",
-            "zmaThree.jpg",
-            "zmaFour.jpg",
-            "5-zma.jpg",
-            "6-zma.jpg",
-            "DSCF6475.jpg",
-            "DSCF6479.jpg",
-            "DSCF6485.jpg"
+            "zma-7.jpg",
+            "zma-9.jpg",
+            "zma-8.jpg",
+            "zma-6.jpg",
+            "zma-1.jpg",
+            "zma-2.jpg",
+            "zma-3.jpg",
+            "zma-4.jpg",
+            "zma-5.jpg"
         ],
         "vimeo": null
     },
@@ -45,19 +45,19 @@
         "visible": true,
         "images_folder": "scientifica",
         "images": [
-            "DSCF1425.jpg",
-            "DSCF1432.jpg",
-            "DSCF1440.jpg",
-            "DSCF1498.jpg"
+            "scientifica-1.jpg",
+            "scientifica-2.jpg",
+            "scientifica-3.jpg",
+            "scientifica-4.jpg"
         ],
         "images_detail": [
-            "DSCF1425.jpg",
-            "DSCF1432.jpg",
-            "DSCF1440.jpg",
-            "DSCF1498.jpg",
-            "DSCF1508.jpg",
-            "DSCF1659.jpg",
-            "DSCF1696.jpg"
+            "scientifica-1.jpg",
+            "scientifica-2.jpg",
+            "scientifica-3.jpg",
+            "scientifica-4.jpg",
+            "scientifica-5.jpg",
+            "scientifica-6.jpg",
+            "scientifica-7.jpg"
         ],
         "vimeo": null
     },
@@ -65,19 +65,19 @@
         "visible": true,
         "images_folder": "rv+acg",
         "images": [
-            "vlcsnap-2021-10-15-12h39m36s633.jpg",
-            "vlcsnap-2021-10-15-16h23m31s046.jpg",
-            "vlcsnap-2021-10-15-16h23m56s992.jpg",
-            "vlcsnap-2021-10-15-12h39m23s616.jpg"
+            "rv+acg-4.jpg",
+            "rv+acg-6.jpg",
+            "rv+acg-7.jpg",
+            "rv+acg-3.jpg"
         ],
         "images_detail": [
-            "vlcsnap-2021-10-15-16h22m17s655.jpg",
-            "vlcsnap-2021-10-15-16h23m31s046.jpg",
-            "vlcsnap-2021-10-15-16h23m56s992.jpg",
-            "vlcsnap-2021-09-24-16h27m37s117.jpg",
-            "vlcsnap-2021-10-15-12h39m17s938.jpg",
-            "vlcsnap-2021-10-15-12h39m23s616.jpg",
-            "vlcsnap-2021-10-15-12h39m36s633.jpg"
+            "rv+acg-5.jpg",
+            "rv+acg-6.jpg",
+            "rv+acg-7.jpg",
+            "rv+acg-1.jpg",
+            "rv+acg-2.jpg",
+            "rv+acg-3.jpg",
+            "rv+acg-4.jpg"
         ],
         "vimeo": null
     },
@@ -85,18 +85,18 @@
         "visible": true,
         "images_folder": "pompea",
         "images": [
-            "Schermata-2021-09-24-alle-16.45.50.jpg",
-            "Schermata-2021-09-24-alle-16.47.45.jpg",
-            "Schermata-2021-09-24-alle-16.48.40.jpg",
-            "Schermata-2021-09-24-alle-16.48.54.jpg"
+            "pompea-1.jpg",
+            "pompea-2.jpg",
+            "pompea-3.jpg",
+            "pompea-4.jpg"
         ],
         "images_detail": [
-            "Schermata-2021-09-24-alle-16.45.50.jpg",
-            "Schermata-2021-09-24-alle-16.47.45.jpg",
-            "Schermata-2021-09-24-alle-16.48.40.jpg",
-            "Schermata-2021-09-24-alle-16.48.54.jpg",
-            "Schermata-2021-09-24-alle-16.50.05.jpg",
-            "Schermata-2021-09-24-alle-16.51.15.jpg"
+            "pompea-1.jpg",
+            "pompea-2.jpg",
+            "pompea-3.jpg",
+            "pompea-4.jpg",
+            "pompea-5.jpg",
+            "pompea-6.jpg"
         ],
         "vimeo": "https://vimeo.com/606395383"
     },
@@ -104,10 +104,10 @@
         "visible": true,
         "images_folder": "durex",
         "images": [
-            "12A_00955.jpg",
-            "13A_00956.jpg",
-            "14A_00957.jpg",
-            "17A_00960.jpg"
+            "durex-1.jpg",
+            "durex-2.jpg",
+            "durex-3.jpg",
+            "durex-4.jpg"
         ],
         "vimeo": "https://vimeo.com/508371897"
     },
@@ -115,21 +115,21 @@
         "visible": true,
         "images_folder": "yesmilano",
         "images": [
-            "DSCF4589.jpg",
-            "DSCF4371.jpg",
-            "DSCF4384.jpg",
-            "DSCF4524.jpg"
+            "yesmilano-5.jpg",
+            "yesmilano-2.jpg",
+            "yesmilano-3.jpg",
+            "yesmilano-4.jpg"
         ],
         "images_detail": [
-            "DSCF4589.jpg",
-            "DSCF4371.jpg",
-            "DSCF4384.jpg",
-            "DSCF4524.jpg",
-            "DSCF4367.jpg",
-            "DSCF4598.jpg",
-            "DSCF4604.jpg",
-            "DSCF4616.jpg",
-            "DSCF4619.jpg"
+            "yesmilano-5.jpg",
+            "yesmilano-2.jpg",
+            "yesmilano-3.jpg",
+            "yesmilano-4.jpg",
+            "yesmilano-1.jpg",
+            "yesmilano-6.jpg",
+            "yesmilano-7.jpg",
+            "yesmilano-8.jpg",
+            "yesmilano-9.jpg"
         ],
         "vimeo": "https://vimeo.com/438645593"
     },
@@ -137,10 +137,10 @@
         "visible": true,
         "images_folder": "enel",
         "images": [
-            "DSCF4935.jpg",
-            "DSCF4993.jpg",
-            "DSCF5015.jpg",
-            "DSCF5028.jpg"
+            "enel-1.jpg",
+            "enel-2.jpg",
+            "enel-3.jpg",
+            "enel-4.jpg"
         ],
         "vimeo": "https://vimeo.com/478433798"
     },
@@ -148,18 +148,18 @@
         "visible": true,
         "images_folder": "personal",
         "images": [
-            "Ryiadhkid2.jpg",
-            "18A_00479.jpg",
-            "27A_00970.jpg",
-            "17A_00478.jpg"
+            "personal-1.jpg",
+            "personal-2.jpg",
+            "personal-3.jpg",
+            "personal-4.jpg"
         ],
         "images_detail": [
-            "Ryiadhkid2.jpg",
-            "18A_00479.jpg",
-            "27A_00970.jpg",
-            "17A_00478.jpg",
-            "_1A_00462-3.jpg",
-            "_2A_00463.jpg"
+            "personal-1.jpg",
+            "personal-2.jpg",
+            "personal-3.jpg",
+            "personal-4.jpg",
+            "personal-5.jpg",
+            "personal-6.jpg"
         ]
     }
 }
