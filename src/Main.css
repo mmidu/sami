@@ -910,9 +910,9 @@ img {
 }
 
 .scrollLine.idle {
-    animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s linear /*cubic-bezier(0.76, 0, 0.3, 1)*/ forwards infinite;
+    animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrollUpLanding 2.2s linear /*cubic-bezier(0.76, 0, 0.3, 1)*/ forwards infinite;
     animation-delay: -0.2s, 0.2s;
-    -webkit-animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrolldownLanding 2.2s linear /*cubic-bezier(0.76, 0, 0.3, 1)*/ forwards infinite;
+    -webkit-animation: scrollInLanding 0.85s cubic-bezier(0.35, 0, 0.3, 1) forwards, scrollUpLanding 2.2s linear /*cubic-bezier(0.76, 0, 0.3, 1)*/ forwards infinite;
     -webkit-animation-delay: -0.2s, 0.2s;
 }
 
@@ -951,15 +951,15 @@ img {
     }
 }
 
-@keyframes scrolldownLanding {
+@keyframes scrollUpLanding {
     0% {
-        background-position: 0 0em;
+        background-position: 0 4.5em;
     }
     /* 75% {
         background-position: 0 0;
     } */
     100% {
-        background-position: 0 4.5em;
+        background-position: 0 0em;
     }
 }
 
