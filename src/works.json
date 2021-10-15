@@ -41,9 +41,9 @@
         ],
         "vimeo": null
     },
-    "ventiseidieci": {
+    "scientifica": {
         "visible": true,
-        "images_folder": "2610",
+        "images_folder": "scientifica",
         "images": [
             "DSCF1425.jpg",
             "DSCF1432.jpg",
@@ -65,15 +65,15 @@
         "visible": true,
         "images_folder": "rv+acg",
         "images": [
-            "vlcsnap-2021-09-24-16h26m18s056.jpg",
-            "vlcsnap-2021-09-24-16h26m38s783.jpg",
-            "vlcsnap-2021-09-24-16h27m39s923.jpg",
-            "vlcsnap-2021-09-24-16h27m37s117.jpg"
+            "vlcsnap-2021-10-15-12h39m36s633.jpg",
+            "vlcsnap-2021-10-15-16h23m31s046.jpg",
+            "vlcsnap-2021-10-15-16h23m56s992.jpg",
+            "vlcsnap-2021-10-15-12h39m23s616.jpg"
         ],
         "images_detail": [
-            "vlcsnap-2021-09-24-16h26m18s056.jpg",
-            "vlcsnap-2021-09-24-16h26m38s783.jpg",
-            "vlcsnap-2021-09-24-16h27m39s923.jpg",
+            "vlcsnap-2021-10-15-16h22m17s655.jpg",
+            "vlcsnap-2021-10-15-16h23m31s046.jpg",
+            "vlcsnap-2021-10-15-16h23m56s992.jpg",
             "vlcsnap-2021-09-24-16h27m37s117.jpg",
             "vlcsnap-2021-10-15-12h39m17s938.jpg",
             "vlcsnap-2021-10-15-12h39m23s616.jpg",
