@@ -101,7 +101,7 @@ class Works extends Component {
       console.log(elem)
       setTimeout(() => {
         let titleClasses = ['workTit', 'play']
-        if(title.length > 9){
+        if (title.length > 9) {
           titleClasses.push('longTitle')
         }
         this.setState({
