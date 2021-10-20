@@ -2,7 +2,7 @@
     "name": "sami-react",
     "version": "0.1.0",
     "private": true,
-    "homepage": "http://www.directedbysami.com/",
+    "homepage": "http://www.samischinaia.com/cs/sami/",
     "dependencies": {
         "@testing-library/jest-dom": "^5.11.4",
         "@testing-library/react": "^11.1.0",
