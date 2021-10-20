@@ -16,7 +16,7 @@ class Main extends Component {
     render() {
         const updatePadding = !!window.chrome || /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
         return (
-            <BrowserRouter basename={'/cs/sami/'}>
+            <BrowserRouter basename={'/'}>
                 {updatePadding ? <Helmet><style>{`
                     .footer svg {
                         display: block;
