@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ReactPlayer from 'react-player'
 
 const VideoModal = (props) => {
-    
+    // const [visible, setVisible] = useState(props.visibility)
     return (
         <div className={`videoModal ${props.visibility}`}>
             <div className='exit' onClick={props.toggleVideoModal}>
@@ -13,6 +13,7 @@ const VideoModal = (props) => {
             <ReactPlayer
                 url={props.url}
                 controls
+                playing={props.visibility === 'visible'}
                 className='video-modal-class'
             />
         </div>
